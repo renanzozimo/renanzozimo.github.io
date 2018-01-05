@@ -1,0 +1,99 @@
+//RAISED BUTTONS
+.btn {
+  &:not(.type-flat) {
+    color: $textPrimaryWhite; //DEFAULT
+    &:not([class*="color-"]) {
+      @include button-variant($defaultPB);
+    }
+    //COLORED BUTTONS
+    &.color-accent {
+      @include button-variant($accentPB);
+    }
+    &.color-complementary {
+      @include button-variant($complementaryPB);
+    }
+    &.color-transparent {
+      @include button-variant(transparent, transparent);
+    }
+    &.color-white {
+      @include button-variant($whitePB, $greyscalePB200);
+    }
+    &.color-transparent,
+    &.color-white {
+      color: $textSecondaryBlack;
+    }
+    &.disabled,
+    &[disabled] {
+      color: rgba($blackPB, 0.26);
+      background-color: rgba($blackPB, 0.12);
+    }
+  }
+}
+
+//FLAT BUTTONS
+.btn {
+  &.type-flat {
+    //DEFAULT
+    &:not([class*="color-"]) {
+      @include flat-button-variant($textSecondaryBlack);
+    }
+    //COLORED BUTTONS
+    &.color-primary {
+      @include flat-button-variant($defaultPB);
+    }
+    &.color-accent {
+      @include flat-button-variant($accentPB);
+    }
+    &.color-complementary {
+      @include flat-button-variant($complementaryPB);
+    }
+    &.color-white {
+      @include flat-button-variant($whitePB, rgba($whitePB, 0.1));
+    }
+    &.disabled,
+    &[disabled] {
+      color: rgba($blackPB, 0.26);
+    }
+    &[class*="color-"] {
+      &.hover-primary:hover {
+        color: darken($defaultPB, 7%);
+      }
+      &.hover-accent:hover {
+        color: darken($accentPB, 7%);
+      }
+      &.hover-complementary:hover {
+        color: darken($complementaryPB, 7%);
+      }
+    }
+    &:not([class*="color-"]) {
+      &.hover-primary:hover {
+        color: $defaultPB;
+      }
+      &.hover-accent:hover {
+        color: $accentPB;
+      }
+      &.hover-complementary:hover {
+        color: $complementaryPB;
+      }
+    }
+  }
+}
+
+.fab-content {
+  background-color: $whitePB;
+}
+
+.btn-group {
+  &.attached button {
+    border-color: rgba($blackPB, 0.1);
+  }
+}
+
+.btn {
+  &.launcher {
+    &::before {
+      border-color: rgba(0, 0, 0, 0.6) transparent transparent transparent;
+      background-color: transparent;
+    }
+  }
+}

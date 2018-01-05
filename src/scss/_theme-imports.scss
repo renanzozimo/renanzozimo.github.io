@@ -1,0 +1,44 @@
+//SETTINGS
+@import "layout/settings/grid-variables";
+@import "theme/settings/variables";
+
+//MIXINS
+@import "theme/mixins/bg-color-trump";
+@import "theme/mixins/buttons";
+@import "theme/mixins/forms";
+@import "theme/mixins/table";
+@import "theme/mixins/text-emphasis";
+
+//GENERIC
+@import "theme/generic/reset";
+
+//BASE
+@import "theme/base/codes";
+@import "theme/base/dividers";
+@import "theme/base/document";
+@import "theme/base/links";
+
+//OBJECTS
+@import "theme/objects/alerts";
+@import "theme/objects/buttons";
+@import "theme/objects/cards";
+@import "theme/objects/chips";
+@import "theme/objects/dropdown";
+@import "theme/objects/forms";
+@import "theme/objects/input-groups";
+@import "theme/objects/inputs";
+@import "theme/objects/lists";
+@import "theme/objects/loading";
+@import "theme/objects/modals";
+@import "theme/objects/snackbar";
+@import "theme/objects/structure-component";
+@import "theme/objects/table";
+@import "theme/objects/tabs";
+@import "theme/objects/text-colors";
+@import "theme/objects/tooltip";
+
+//COMPONENTS --- added according to project singularity
+@import "../theme-components";
+
+//Trumps
+@import "theme/trumps/trumps";

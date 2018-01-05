@@ -1,0 +1,41 @@
+.input-group {
+  width: 100%;
+  @extend .relative;
+  .select-input,
+  input {
+    border-radius: 0;
+  }
+  .select-input,
+  input {
+    @include border-left-radius($radiusUnity);
+  }
+}
+
+.input-group-container {
+  display: flex;
+  align-items: center;
+  @extend .space-between;
+  width: 100%;
+  @extend .relative;
+  .btn {
+    &.type-flat,
+    &.type-flat::before,
+    &.type-flat:after {
+      border-radius: 0;
+    }
+    &.type-flat {
+      border-style: solid;
+      border-width: 1px 1px 1px 0;
+    }
+    &:last-of-type {
+      &,
+      &::before,
+      &:after {
+        @include border-right-radius($radiusUnity)
+      }
+    }
+    &:disabled {
+      opacity: 0.4;
+    }
+  }
+}

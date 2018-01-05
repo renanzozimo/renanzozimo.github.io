@@ -1,0 +1,45 @@
+.list-group {
+  @extend .list-unstyled;
+}
+
+button.list-item {
+  width: 100%;
+}
+
+.list-item {
+  @extend .relative;
+  width: 100%;
+  &:not(.text-nowrap) {
+    word-wrap: break-word;
+  }
+  &:not([class*='divider']) {
+    padding: $spacing-1;
+  }
+  /*NOT TO FLEX ITEMS*/
+  .list-group &:not([class*="space-"]) {
+    @extend .block;
+  }
+  &[class*='divider'] {
+    margin: $spacing-1 0;
+    border-bottom-width: 1px;
+  }
+  &.dashed-divider {
+    border-bottom-style: dashed;
+  }
+  &.solid-divider {
+    border-bottom-style: solid;
+  }
+  &:last-child {
+    border-bottom-width: 0;
+  }
+  // Active class on item itself, not parent
+  &.active,
+  &.active:focus,
+  &.active:hover {
+    z-index: 2; // Place active items above their siblings for proper border styling
+  }
+}
+
+.list-unstyled {
+  @include list-unstyled;
+}

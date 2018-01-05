@@ -1,0 +1,12 @@
+.card {
+  background-color: $whitePB;
+  &::before,
+  &::after {
+    background-color: $whitePB;
+  }
+}
+
+.card-header,
+.card-footer {
+  border-color: $textDivadersBlack;
+}

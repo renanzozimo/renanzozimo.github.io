@@ -1,0 +1,12 @@
+@import "scss/theme/mixins/material-colors"; //mixin with all colors
+@include themeColor(teal, blue, orange); //mixin to get material design colors
+
+//CUSTOM COLOR VARARIABLES
+//extract variables only from 'theme/settings/_variables.scss'
+
+// $accentPB:                $accentPB800;
+// $accentPBDark:            $accentPB800;
+
+//END CUSTOM COLOR VARARIABLES
+
+@import "scss/theme-imports";

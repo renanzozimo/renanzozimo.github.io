@@ -1,0 +1,83 @@
+//-----------------------------------------//
+// SETTINGS: Grid global variables related //
+//-----------------------------------------//
+// - - - - - LAYOUT BASES
+$spacingMini: 5px !default;
+$spacing-1: 15px !default;
+$spacing-2: 30px !default;
+$radius: 5px !default;
+$radiusUnity: 5px !default;
+
+
+// - - - - - Z-INDEX CONTROL
+$zindex-navbar: 1000 !default;
+$zindex-navbar-fixed: 1030 !default;
+$zindex-fab : 1030 !default;
+$zindex-mezzanine : 1040 !default;
+$zindex-modal-background: 1040 !default;
+$zindex-modal: 1050 !default;
+$zindex-dropdown: 1060 !default;
+$zindex-popover: 1060 !default;
+$zindex-snackbar: 1060 !default;
+$zindex-tooltip: 1070 !default;
+$zindex-fixed-buttons-bottom: 1080 !default;
+
+
+// - - - - - TYPE
+$font-size-base : 15px !default;
+$line-height-base : 1.428571429 !default;
+$font-family-base : 'Montserrat', sans-serif !default;
+$avatarCharacterFontSize: 1.64285714em;
+
+
+// - - - - -INPUTS AND FORMS
+$inputHeight : ($font-size-base * 2) + ($spacingMini * 2) !default;
+$validate-icon-font-size : 18px !default;
+$select-caret-font-size : 18px !default;
+$input-group-btn-font-size : 24px !default;
+
+
+// - - - - - ICON
+$btn-icon-size-1: 34px !default;
+$btn-icon-size-mini: 28px !default;
+
+
+// - - - - - SHADOWS
+$shadowValues: ( 
+  1: ( 
+    normal: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+    mouseOver: '0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)'
+  ), 
+  2: ( 
+    normal: '0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)',
+    mouseOver: '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)'
+  ),
+  3: ( 
+    normal: '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)',
+    mouseOver: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
+  ),
+  4: ( 
+    normal: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)',
+    mouseOver: '0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)'
+  )
+);
+
+
+// - - - - - NAVBAR
+$bodyPaddingTopMenuResponse: 0;
+
+//body behavior
+$bodyPaddingLeftMenuResponse: 0;
+
+
+// - - - - - INPUT RANGE
+$range-thumb-height : 15px !default;
+$range-thumb-width : 15px !default;
+$range-track-height : 2px !default;
+$range-track-border-width : 0 !default;
+
+// - - - - - MEZZANINE
+$mezzanine-lg-size : 400px;
+
+// - - - - - SNACKBAR
+$snackbar-max-width : 568px;

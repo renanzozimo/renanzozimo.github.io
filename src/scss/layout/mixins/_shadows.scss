@@ -1,0 +1,76 @@
+//--------------------------------------//
+// TOOLS: Default mixins anda functions //
+//--------------------------------------//
+//Material Design shadows
+
+@mixin shadow($level, $shadow, $mouseOverShadow) {
+  .shadow-#{$level} {
+    box-shadow: $shadow;
+    &.interactive {
+      box-shadow: $shadow;
+      &:not([disabled]):not(.disabled) {
+        &:not(.no-bg-hover) {
+          &:hover,
+          &.active {
+            box-shadow: $mouseOverShadow;
+          }
+          &:not(.no-active-feedback) {
+            &:active,
+            &:focus {
+              box-shadow: $mouseOverShadow;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin includeShadowOnElement($level) {
+
+  $shadow: nth(nth($shadowValues, $level), 2);
+  $normal: unquote(map-get($shadow, normal));
+  $mouseOverShadow: unquote(map-get($shadow, mouseOver));
+
+  box-shadow: $normal;
+  &.interactive {
+    box-shadow: $normal;
+    &:not([disabled]):not(.disabled) {
+      &:not(.no-bg-hover) {
+        &:hover,
+        &.active {
+          box-shadow: $mouseOverShadow;
+        }
+        &:not(.no-active-feedback) {
+          &:active,
+          &:focus {
+            box-shadow: $mouseOverShadow;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin includeShadowOnElementWithMouseOver($level) {
+
+  $shadow: nth(nth($shadowValues, $level), 2);
+  $normal: unquote(map-get($shadow, normal));
+  $mouseOverShadow: unquote(map-get($shadow, mouseOver));
+
+  box-shadow: $normal;
+  &:not([disabled]):not(.disabled) {
+    &:not(.no-bg-hover) {
+      &:hover,
+      &.active {
+        box-shadow: $mouseOverShadow;
+      }
+      &:not(.no-active-feedback) {
+        &:active,
+        &:focus {
+          box-shadow: $mouseOverShadow;
+        }
+      }
+    }
+  }
+}

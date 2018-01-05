@@ -1,163 +1,124 @@
+
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Renan Zózimo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/layout.css">
+  <link rel="stylesheet" href="src/css/theme.css">
 </head>
 <body>
-    <h1>Hello Word!</h1>
-    <p>Renan Zózimo</p>
-
-    <style>
-        .pd-30 {
-            padding: 30px;
-        }
-
-        .window-part {
-            border: 5px solid;
-            height: 50px;
-            position: relative;
-            width: 50px;
-        }
-        .window {
-            border-radius: 5px;
-            overflow: hidden;
-            margin: 0 auto;
-            position: relative;
-            transform: rotate(-45deg);
-            width: 150px;
-            height: 150px;
-        }
-
-        g, g > * {
-            transition: fill 500ms;
-        }
-        .right .right, .right .down-corner {
-            fill: red;
-        }
-        .left .left, .left .down-corner {
-            fill: red;
-        }
-    </style>
-
+  <header class="container-fluid bg-color primary color text-primary-white pd-tp-2 pd-bt-2">
     <div class="row">
-        <div class="col-xs-12">
-            <div class="window">
-                <svg version="1.1" class="diamond" x="0px" y="0px"
-                	 viewBox="0 0 140 140" style="enable-background:new 0 0 140 140;" xml:space="preserve">
-                    <g class="final">
-                    	<rect class="down-corner" x="135" width="5" height="5"/>
-                    </g>
-                    <g class="right-2">
-                    	<g class="right">
-                    		<rect x="135" y="5" width="5" height="40"/>
-                    	</g>
-                    	<rect class="down-corner" x="135" y="45" width="5" height="5"/>
-                    </g>
-                    <g class="right-1">
-                    	<g class="right">
-                    		<rect x="135" y="50" width="5" height="40"/>
-                    	</g>
-                    	<rect class="down-corner" x="135" y="90" width="5" height="5"/>
-                    </g>
-                    <g class="left-2">
-                    	<g class="left">
-                    		<rect x="95" y="0" width="40" height="5"/>
-                    	</g>
-                    	<rect class="down-corner" x="90" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 95 -90)" width="5" height="5"/>
-                    </g>
-                    <g class="left-1">
-                    	<g class="left">
-                    		<rect x="50" y="0" width="40" height="5"/>
-                    	</g>
-                    	<rect class="down-corner" x="45" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 50 -45)" width="5" height="5"/>
-                    </g>
-                    <g class="lv5-1">
-                    	<g class="right">
-                    		<rect x="95" y="45" width="40" height="5"/>
-                    	</g>
-                    	<g class="left">
-                    		<rect x="90" y="5" width="5" height="40"/>
-                    	</g>
-                    	<rect class="down-corner" x="90" y="45" width="5" height="5"/>
-                    </g>
-                    <g class="lv4-2">
-                    	<g class="right">
-                    		<rect x="95" y="90" width="40" height="5"/>
-                    	</g>
-                    	<g class="left2_">
-                    		<rect x="90" y="50" width="5" height="40"/>
-                    	</g>
-                    	<rect class="down-corner" x="90" y="90" width="5" height="5"/>
-                    </g>
-                    <g class="lv4-1">
-                    	<g class="right">
-                    		<rect x="50" y="45" width="40" height="5"/>
-                    	</g>
-                    	<g class="left">
-                    		<rect x="45" y="5" width="5" height="40"/>
-                    	</g>
-                    	<rect class="down-corner" x="45" y="45" width="5" height="5"/>
-                    </g>
-                    <g class="lv3-3">
-                    	<g class="right">
-                    		<polygon points="135,95 135,135 95,135 95,140 135,140 140,140 140,135 140,95 		"/>
-                    	</g>
-                    	<g class="left">
-                    		<rect x="90" y="95" width="5" height="40"/>
-                    	</g>
-                    	<rect class="down-corner" x="90" y="135" width="5" height="5"/>
-                    </g>
-                    <g class="lv3-2">
-                    	<g class="right">
-                    		<rect x="50" y="90" width="40" height="5"/>
-                    	</g>
-                    	<g class="left">
-                    		<rect x="45" y="50" width="5" height="40"/>
-                    	</g>
-                    	<rect class="down-corner" x="45" y="90" width="5" height="5"/>
-                    </g>
-                    <g class="lv3-1">
-                    	<g class="right">
-                    		<rect x="5" y="45" width="40" height="5"/>
-                    	</g>
-                    	<g class="left">
-                    		<polygon points="5,0 0,0 0,5 0,45 5,45 5,5 45,5 45,0 		"/>
-                    	</g>
-                    	<rect class="down-corner" x="0" y="45" width="5" height="5"/>
-                    </g>
-                    <g class="lv2-2">
-                    	<g class="right">
-                    		<rect x="50" y="135" width="40" height="5"/>
-                    	</g>
-                    	<g class="left">
-                    		<rect x="45" y="95" width="5" height="40"/>
-                    	</g>
-                    	<rect class="down-corner" x="45" y="135" width="5" height="5"/>
-                    </g>
-                    <g class="lv2-1">
-                    	<g class="right">
-                    		<rect x="5" y="90" width="40" height="5"/>
-                    	</g>
-                    	<g class="left">
-                    		<rect y="50" width="5" height="40"/>
-                    	</g>
-                    	<rect class="down-corner" x="0" y="90" width="5" height="5"/>
-                    </g>
-                    <g class="lv1-1">
-                    	<g class="right">
-                    		<rect x="5" y="135" width="40" height="5"/>
-                    	</g>
-                    	<g class="left">
-                    		<rect y="95" width="5" height="40"/>
-                    	</g>
-                    	<rect class="down-corner" x="0" y="135" width="5" height="5"/>
-                    </g>
-                </svg>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h1 class="display-2">Renan Zózimo</h1>
+            <h4 class="color text-secondary-white">UX Designer and sometimes Front-end Developer</h4>
+            <h4 class="mg-tp-2 mg-bt-1 text-right v-align-children">
+              <i class="material-icons color text-secondary-white">place</i>
+              <span>BH, Minas Gerais</span>
+            </h4>
+          </div>
         </div>
+      </div>
     </div>
+  </header>
+
+  <main class="container pd-tp-2">
+    <h2 class="mg-bt-2">Perfil profissional</h2>
+    <div class="row">
+      <article class="col-xs-12 mg-bt-2">
+        <h4 class="mg-bt-1">Habilidades</h4>
+        <table id="skills-table" class="table-card table-striped">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Experiência</th>
+              <th>Nível atual</th>
+              <th>Expectativa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="pivot" data-th="Habilidades">Design de interfaces</td>
+              <td data-th="Experiência">
+                <i class="material-icons sz-1">star</i>
+                <i class="material-icons sz-1">star</i>
+                <i class="material-icons sz-1">star</i>
+                <i class="material-icons sz-1 color text-disabled-black">star</i>
+                <i class="material-icons sz-1 color text-disabled-black">star</i>
+              </td>
+              <td data-th="Nível atual">
+                <i class="material-icons sz-1">star</i>
+                <i class="material-icons sz-1">star</i>
+                <i class="material-icons sz-1">star</i>
+                <i class="material-icons sz-1 color text-disabled-black">star</i>
+                <i class="material-icons sz-1 color text-disabled-black">star</i>
+              </td>
+              <td data-th="Expectativa">
+                <i class="material-icons sz-1">star</i>
+                <i class="material-icons sz-1">star</i>
+                <i class="material-icons sz-1">star</i>
+                <i class="material-icons sz-1 color text-disabled-black">star</i>
+                <i class="material-icons sz-1 color text-disabled-black">star</i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+      <article class="col-xs-12 col-md-8 col-lg-6 mg-bt-2">
+        <h4 class="mg-bt-1">Resumo</h4>
+        <p>Trabalho há 4 anos com sistemas web e mobile, desenvolvendo soluções criativas e aprimorando interfaces.</p>
+        <p class="mg-tp-1">Meu objetivo é oferecer interações garantindo a boa experiência do usuário nas tarefas do dia a dia.</p>
+        <div class="btn-group mg-tp-1">
+          <button class="btn type-flat color-accent">+ sobre o que acredito</button>
+        </div>
+      </article>
+      <article class="col-xs-12 col-md-8 col-lg-6 mg-bt-2">
+        <h4 class="mg-bt-1">Experiências profissionais</h4>
+        <section class="card flex-start top pd-1">
+          <h6 style="width: 100px; flex-shrink: 0; transform: translateY(2px)">2013 a 2018</h6>
+          <div class="full-width">
+            <p class="subheading">Prime Systems</p>
+            <p><small>UX Designer + Front end developer</small></p>
+            <div class="btn-group text-right mg-tp-mini">
+              <button class="btn type-flat color-accent">+ detalhes</button>
+            </div>
+          </div>
+        </section>
+        <section class="card flex-start top pd-1">
+          <h6 style="width: 100px; flex-shrink: 0; transform: translateY(2px)">2011 a 2013</h6>
+          <div class="full-width">
+            <p class="subheading">Portal UAI</p>
+            <p><small>Aux. Produção de Internet</small></p>
+            <div class="btn-group text-right mg-tp-mini">
+              <button class="btn type-flat color-accent">+ detalhes</button>
+            </div>
+          </div>
+        </section>
+        <div class="btn-group text-right">
+          <a href="http://www.linkedin.com/in/renanzozimo" class="" style="text-decoration: 1px solid">
+            <span class="mg-rt-mini">ir para linkedin</span>
+            <img src="src/imgs/linkedin.svg" alt="linkedin" style="width: 24px;">
+          </a>
+        </div>
+      </article>
+      <article class="col-xs-12">
+        <h4 class="mg-bt-1">Feitos profissionais</h4>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
 
 </body>
 </html>

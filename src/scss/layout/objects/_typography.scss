@@ -1,0 +1,26 @@
+.display-1 {
+  font-size: 2.42em;
+  font-weight: 400;
+  &.fw-300 {
+    font-size: 33px;
+    font-weight: 300;
+  }
+}
+
+.display-2 {
+  font-size: 3.21em;
+  font-weight: 400;
+  &.fw-300 {
+    font-size: 3.14em;
+    font-weight: 300;
+  }
+}
+
+.display-3 {
+  font-size: 4em;
+  font-weight: 400;
+  &.fw-300 {
+    font-size: 3.92em;
+    font-weight: 300;
+  }
+}

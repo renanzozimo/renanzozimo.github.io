@@ -1,0 +1,15 @@
+@include form-group-state-variant('has-error', $error);
+@include form-group-state-variant('success', $success);
+@include form-group-state-variant('has-warning', $warning);
+.form-group {
+  & .material-input {
+    color: $defaultPB;
+  }
+  &.is-focused .control-label {
+    color: $defaultPB;
+  }
+}
+
+fieldset {
+  border-color: $textDivadersBlack;
+}

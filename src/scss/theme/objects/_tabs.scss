@@ -1,0 +1,25 @@
+.tabs {
+  li {
+    color: $textSecondaryBlack;
+    &::after {
+      background-color: $defaultPB;
+    }
+    &:hover {
+      color: $textPrimaryBlack;
+    }
+  }
+  &.accent,
+  &.primary,
+  .primary>&,
+  .accent & {
+    li {
+      color: #fff;
+      &::after {
+        background-color: #fff;
+      }
+      &:hover {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+}

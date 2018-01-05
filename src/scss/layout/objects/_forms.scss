@@ -1,0 +1,91 @@
+ps-form,
+form,
+.structure-header+ps-form {
+  height: 100%;
+}
+
+.form-group {
+  @extend .relative;
+  &:not([class*="mg-bt"]) {
+    margin-bottom: $spacing-2;
+    .structure-header &,
+    .structure-footer & {
+      margin: 0;
+    }
+  }
+  .material-input {
+    margin-top: -2px;
+    position: absolute;
+    top: $inputHeight;
+    left: 0;
+    border-bottom: 2px solid;
+    transition: transform 0.2s ease 0.1s;
+    transform: scaleX(0);
+    z-index: 2;
+    width: 100%;
+  }
+  &.is-focused .material-input {
+    transform: scaleX(1);
+  }
+}
+
+.help-block {
+  &:not(i) {
+    font-size: 80%;
+    line-height: 1.5;
+    margin-top: $spacingMini;
+    @extend .block;
+    &+.max-lenght-counter {
+      float: right;
+      width: 35%;
+    }
+  }
+  input[maxlength]+&:not(i):not(.max-lenght-counter),
+  textarea[maxlength]+&:not(i):not(.max-lenght-counter) {
+    float: left;
+    width: 65%;
+  }
+}
+
+i.help-block {
+  top: round($inputHeight/2);
+  position: absolute;
+  right: 6px;
+  font-size: $validate-icon-font-size;
+  margin-top: round($validate-icon-font-size/2 * -1);
+  .select-input & {
+    right: $select-caret-font-size + 12;
+  }
+  ps-textarea & {
+    right: 17px + 6px; //scroll width + initial right position
+  }
+}
+
+.control-label {
+  @extend .block;
+  @extend .v-align-children;
+  .form-group:not([class*="checkbox"]):not(.radio) & {
+    padding-bottom: $spacingMini;
+  }
+  &.required {
+    span {
+      &:after {
+        content: "*";
+        margin-left: $spacingMini;
+      }
+    }
+  }
+}
+
+fieldset {
+  margin-bottom: $spacing-2;
+  padding-top: $spacing-1;
+  padding-bottom: $spacing-1;
+  &:first-of-type {
+    border-width: 0;
+  }
+}
+
+textarea.no-resize {
+  resize: none;
+}

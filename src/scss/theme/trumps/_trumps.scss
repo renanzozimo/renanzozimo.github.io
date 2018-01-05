@@ -1,0 +1,36 @@
+@include bg-color-trump('primary', $defaultPB);
+@include bg-color-trump('primary-dark', $defaultPBDark);
+@include bg-color-trump('primary-light', $defaultPBLight);
+@include bg-color-trump('accent', $accentPB);
+@include bg-color-trump('accent-dark', $accentPBDark);
+@include bg-color-trump('accent-light', $accentPBLight);
+@include bg-color-trump('complementary', $complementaryPB);
+@include bg-color-trump('complementary-dark', $complementaryPBDark);
+@include bg-color-trump('complementary-light', $complementaryPBLight);
+@include bg-color-trump('white', $whitePB);
+@include bg-color-trump('black', $blackPB);
+@include bg-color-trump('body-bg', $body-bg);
+.line-background-title {
+  &::before {
+    border-top-color: $textDivadersBlack;
+  }
+  &.border-white::before {
+    border-top-color: $textDivadersWhite;
+  }
+}
+
+//NOTIFICATION COUNTER
+.icon-badge {
+  &:not(.bg-color) {
+    background-color: #666;
+  }
+  &:not(.color) {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+//AVATAR
+.avatar-character:not(.bg-color) {
+  background-color: $defaultPB;
+  color: rgba($whitePB, 0.7);
+}

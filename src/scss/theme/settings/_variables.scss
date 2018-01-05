@@ -1,0 +1,54 @@
+@import "../mixins/material-colors";
+
+$defaultPB:               $defaultPB500 !default;
+$defaultPBDark:           $defaultPB800 !default;
+$defaultPBLight:          $defaultPB200 !default;
+
+$accentPB:                $accentPBA400 !default;
+$accentPBDark:            $accentPBA700 !default;
+$accentPBLight:           $accentPBA100 !default;
+
+$complementaryPB:         $compPB500 !default;
+$complementaryPBDark:     $compPB800 !default;
+$complementaryPBLight:    $compPB200 !default;
+
+$blackPB:                 #000000 !default;
+$whitePB:                 #ffffff !default;
+
+$textPrimaryBlack:        rgba($blackPB, 0.77) !default;
+$textSecondaryBlack:      rgba($blackPB, 0.44) !default;
+$textDisabledBlack:       rgba($blackPB, 0.24) !default;
+$textDivadersBlack:       rgba($blackPB, 0.12) !default;
+
+$textPrimaryWhite:        rgba($whitePB, 1) !default;
+$textSecondaryWhite:      rgba($whitePB, 0.7) !default;
+$textDisabledWhite:       rgba($whitePB, 0.5) !default;
+$textDivadersWhite:       rgba($whitePB, 0.12) !default;
+
+$link-color:              $accentPB !default;
+$link-hover-color:        darken($accentPB, 10%) !default;
+
+$success:                 #5cb85c !default;
+$info:                    #5bc0de !default;
+$warning:                 #f0ad4e !default;
+$error:                   #d9534f !default;
+
+$text-color:              $textPrimaryBlack !default;
+$body-bg:                 #efefef !default;
+$selection-bg:            $accentPB !default;
+$selection-text-color:    $whitePB !default;
+
+$greyscalePB50:           #FAFAFA !default;
+$greyscalePB100:          #F5F5F5 !default;
+$greyscalePB200:          #EEEEEE !default;
+$greyscalePB300:          #E0E0E0 !default;
+$greyscalePB400:          #BDBDBD !default;
+$greyscalePB500:          #9E9E9E !default;
+$greyscalePB600:          #757575 !default;
+$greyscalePB700:          #616161 !default;
+$greyscalePB800:          #424242 !default;
+$greyscalePB900:          #212121 !default;
+
+$inputBgColor:            $whitePB;
+
+$PBStorePrimaryColor:     #0060a1 !default;

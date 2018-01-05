@@ -1,0 +1,38 @@
+@each $bPoint in $breakPoints {
+  $sizeName: nth($bPoint, 1);
+  $sizeValue: nth($bPoint, 2);
+  $space: nth($bPoint, 3) / 2;
+  $breakPoint: $sizeValue;
+  @if $i==1 {
+    @include make-all-grid($sizeName, $sizeValue, $space);
+  }
+  @if $i>1 {
+    @media (min-width: #{$breakPoint}px) {
+      @include make-all-grid($sizeName, $sizeValue, $space);
+    }
+  }
+  $i: $i+1;
+}
+
+// CONTAINER
+@each $bPoint in $breakPoints {
+  $sizeValue: nth($bPoint, 2);
+  $space: nth($bPoint, 3);
+  @media (min-width: #{$sizeValue}px) {
+    .container {
+      width: $sizeValue - $space + px;
+    }
+  }
+}
+.container,
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: $spacing-1;
+  padding-right: $spacing-1;
+}
+.row {
+  margin-left: $spacing-1 * -1;
+  margin-right: $spacing-1 * -1;
+  @include clearfix;
+}

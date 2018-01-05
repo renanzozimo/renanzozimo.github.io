@@ -1,0 +1,962 @@
+@mixin themeColor($a: pb, $b: pb, $c: pb) {
+	@if $a==red {
+		$defaultPB50: #ffebee !global;
+		$defaultPB100: #ffcdd2 !global;
+		$defaultPB200: #ef9a9a !global;
+		$defaultPB300: #e57373 !global;
+		$defaultPB400: #ef5350 !global;
+		$defaultPB500: #f44336 !global;
+		$defaultPB600: #e53935 !global;
+		$defaultPB700: #d32f2f !global;
+		$defaultPB800: #c62828 !global;
+		$defaultPB900: #b71c1c !global;
+		$defaultPBA100: #ff8a80 !global;
+		$defaultPBA200: #ff5252 !global;
+		$defaultPBA400: #ff1744 !global;
+		$defaultPBA700: #d50000 !global;
+	}
+	@else if $a==pink {
+		$defaultPB50: #fce4ec !global;
+		$defaultPB100: #f8bbd0 !global;
+		$defaultPB200: #f48fb1 !global;
+		$defaultPB300: #f06292 !global;
+		$defaultPB400: #ec407a !global;
+		$defaultPB500: #e91e63 !global;
+		$defaultPB600: #d81b60 !global;
+		$defaultPB700: #c2185b !global;
+		$defaultPB800: #ad1457 !global;
+		$defaultPB900: #880e4f !global;
+		$defaultPBA100: #ff80ab !global;
+		$defaultPBA200: #ff4081 !global;
+		$defaultPBA400: #f50057 !global;
+		$defaultPBA700: #c51162 !global;
+	}
+	@else if $a==purple {
+		$defaultPB50: #f3e5f5 !global;
+		$defaultPB100: #e1bee7 !global;
+		$defaultPB200: #ce93d8 !global;
+		$defaultPB300: #ba68c8 !global;
+		$defaultPB400: #ab47bc !global;
+		$defaultPB500: #9c27b0 !global;
+		$defaultPB600: #8e24aa !global;
+		$defaultPB700: #7b1fa2 !global;
+		$defaultPB800: #6a1b9a !global;
+		$defaultPB900: #4a148c !global;
+		$defaultPBA100: #ea80fc !global;
+		$defaultPBA200: #e040fb !global;
+		$defaultPBA400: #d500f9 !global;
+		$defaultPBA700: #aa00ff !global;
+	}
+	@else if $a==deep-purple {
+		$defaultPB50: #ede7f6 !global;
+		$defaultPB100: #d1c4e9 !global;
+		$defaultPB200: #b39ddb !global;
+		$defaultPB300: #9575cd !global;
+		$defaultPB400: #7e57c2 !global;
+		$defaultPB500: #673ab7 !global;
+		$defaultPB600: #5e35b1 !global;
+		$defaultPB700: #512da8 !global;
+		$defaultPB800: #4527a0 !global;
+		$defaultPB900: #311b92 !global;
+		$defaultPBA100: #b388ff !global;
+		$defaultPBA200: #7c4dff !global;
+		$defaultPBA400: #651fff !global;
+		$defaultPBA700: #6200ea !global;
+	}
+	@else if $a==indigo {
+		$defaultPB50: #e8eaf6 !global;
+		$defaultPB100: #c5cae9 !global;
+		$defaultPB200: #9fa8da !global;
+		$defaultPB300: #7986cb !global;
+		$defaultPB400: #5c6bc0 !global;
+		$defaultPB500: #3f51b5 !global;
+		$defaultPB600: #3949ab !global;
+		$defaultPB700: #303f9f !global;
+		$defaultPB800: #283593 !global;
+		$defaultPB900: #1a237e !global;
+		$defaultPBA100: #8c9eff !global;
+		$defaultPBA200: #536dfe !global;
+		$defaultPBA400: #3d5afe !global;
+		$defaultPBA700: #304ffe !global;
+	}
+	@else if $a==blue {
+		$defaultPB50: #e3f2fd !global;
+		$defaultPB100: #bbdefb !global;
+		$defaultPB200: #90caf9 !global;
+		$defaultPB300: #64b5f6 !global;
+		$defaultPB400: #42a5f5 !global;
+		$defaultPB500: #2196f3 !global;
+		$defaultPB600: #1e88e5 !global;
+		$defaultPB700: #1976d2 !global;
+		$defaultPB800: #1565c0 !global;
+		$defaultPB900: #0d47a1 !global;
+		$defaultPBA100: #82b1ff !global;
+		$defaultPBA200: #448aff !global;
+		$defaultPBA400: #2979ff !global;
+		$defaultPBA700: #2962ff !global;
+	}
+	@else if $a==light-blue {
+		$defaultPB50: #e1f5fe !global;
+		$defaultPB100: #b3e5fc !global;
+		$defaultPB200: #81d4fa !global;
+		$defaultPB300: #4fc3f7 !global;
+		$defaultPB400: #29b6f6 !global;
+		$defaultPB500: #03a9f4 !global;
+		$defaultPB600: #039be5 !global;
+		$defaultPB700: #0288d1 !global;
+		$defaultPB800: #0277bd !global;
+		$defaultPB900: #01579b !global;
+		$defaultPBA100: #80d8ff !global;
+		$defaultPBA200: #40c4ff !global;
+		$defaultPBA400: #00b0ff !global;
+		$defaultPBA700: #0091ea !global;
+	}
+	@else if $a==cyan {
+		$defaultPB50: #e0f7fa !global;
+		$defaultPB100: #b2ebf2 !global;
+		$defaultPB200: #80deea !global;
+		$defaultPB300: #4dd0e1 !global;
+		$defaultPB400: #26c6da !global;
+		$defaultPB500: #00bcd4 !global;
+		$defaultPB600: #00acc1 !global;
+		$defaultPB700: #0097a7 !global;
+		$defaultPB800: #00838f !global;
+		$defaultPB900: #006064 !global;
+		$defaultPBA100: #84ffff !global;
+		$defaultPBA200: #18ffff !global;
+		$defaultPBA400: #00e5ff !global;
+		$defaultPBA700: #00b8d4 !global;
+	}
+	@else if $a==teal {
+		$defaultPB50: #e0f2f1 !global;
+		$defaultPB100: #b2dfdb !global;
+		$defaultPB200: #80cbc4 !global;
+		$defaultPB300: #4db6ac !global;
+		$defaultPB400: #26a69a !global;
+		$defaultPB500: #009688 !global;
+		$defaultPB600: #00897b !global;
+		$defaultPB700: #00796b !global;
+		$defaultPB800: #00695c !global;
+		$defaultPB900: #004d40 !global;
+		$defaultPBA100: #a7ffeb !global;
+		$defaultPBA200: #64ffda !global;
+		$defaultPBA400: #1de9b6 !global;
+		$defaultPBA700: #00bfa5 !global;
+	}
+	@else if $a==green {
+		$defaultPB50: #e8f5e9 !global;
+		$defaultPB100: #c8e6c9 !global;
+		$defaultPB200: #a5d6a7 !global;
+		$defaultPB300: #81c784 !global;
+		$defaultPB400: #66bb6a !global;
+		$defaultPB500: #4caf50 !global;
+		$defaultPB600: #43a047 !global;
+		$defaultPB700: #388e3c !global;
+		$defaultPB800: #2e7d32 !global;
+		$defaultPB900: #1b5e20 !global;
+		$defaultPBA100: #b9f6ca !global;
+		$defaultPBA200: #69f0ae !global;
+		$defaultPBA400: #00e676 !global;
+		$defaultPBA700: #00c853 !global;
+	}
+	@else if $a==light-green {
+		$defaultPB50: #f1f8e9 !global;
+		$defaultPB100: #dcedc8 !global;
+		$defaultPB200: #c5e1a5 !global;
+		$defaultPB300: #aed581 !global;
+		$defaultPB400: #9ccc65 !global;
+		$defaultPB500: #8bc34a !global;
+		$defaultPB600: #7cb342 !global;
+		$defaultPB700: #689f38 !global;
+		$defaultPB800: #558b2f !global;
+		$defaultPB900: #33691e !global;
+		$defaultPBA100: #ccff90 !global;
+		$defaultPBA200: #b2ff59 !global;
+		$defaultPBA400: #76ff03 !global;
+		$defaultPBA700: #64dd17 !global;
+	}
+	@else if $a==lime {
+		$defaultPB50: #f9fbe7 !global;
+		$defaultPB100: #f0f4c3 !global;
+		$defaultPB200: #e6ee9c !global;
+		$defaultPB300: #dce775 !global;
+		$defaultPB400: #d4e157 !global;
+		$defaultPB500: #cddc39 !global;
+		$defaultPB600: #c0ca33 !global;
+		$defaultPB700: #afb42b !global;
+		$defaultPB800: #9e9d24 !global;
+		$defaultPB900: #827717 !global;
+		$defaultPBA100: #f4ff81 !global;
+		$defaultPBA200: #eeff41 !global;
+		$defaultPBA400: #c6ff00 !global;
+		$defaultPBA700: #aeea00 !global;
+	}
+	@else if $a==yellow {
+		$defaultPB50: #fffde7 !global;
+		$defaultPB100: #fff9c4 !global;
+		$defaultPB200: #fff59d !global;
+		$defaultPB300: #fff176 !global;
+		$defaultPB400: #ffee58 !global;
+		$defaultPB500: #ffeb3b !global;
+		$defaultPB600: #fdd835 !global;
+		$defaultPB700: #fbc02d !global;
+		$defaultPB800: #f9a825 !global;
+		$defaultPB900: #f57f17 !global;
+		$defaultPBA100: #ffff8d !global;
+		$defaultPBA200: #ffff00 !global;
+		$defaultPBA400: #ffea00 !global;
+		$defaultPBA700: #ffd600 !global;
+	}
+	@else if $a==amber {
+		$defaultPB50: #fff8e1 !global;
+		$defaultPB100: #ffecb3 !global;
+		$defaultPB200: #ffe082 !global;
+		$defaultPB300: #ffd54f !global;
+		$defaultPB400: #ffca28 !global;
+		$defaultPB500: #ffc107 !global;
+		$defaultPB600: #ffb300 !global;
+		$defaultPB700: #ffa000 !global;
+		$defaultPB800: #ff8f00 !global;
+		$defaultPB900: #ff6f00 !global;
+		$defaultPBA100: #ffe57f !global;
+		$defaultPBA200: #ffd740 !global;
+		$defaultPBA400: #ffc400 !global;
+		$defaultPBA700: #ffab00 !global;
+	}
+	@else if $a==orange {
+		$defaultPB50: #fff3e0 !global;
+		$defaultPB100: #ffe0b2 !global;
+		$defaultPB200: #ffcc80 !global;
+		$defaultPB300: #ffb74d !global;
+		$defaultPB400: #ffa726 !global;
+		$defaultPB500: #ff9800 !global;
+		$defaultPB600: #fb8c00 !global;
+		$defaultPB700: #f57c00 !global;
+		$defaultPB800: #ef6c00 !global;
+		$defaultPB900: #e65100 !global;
+		$defaultPBA100: #ffd180 !global;
+		$defaultPBA200: #ffab40 !global;
+		$defaultPBA400: #ff9100 !global;
+		$defaultPBA700: #ff6d00 !global;
+	}
+	@else if $a==deep-orange {
+		$defaultPB50: #fbe9e7 !global;
+		$defaultPB100: #ffccbc !global;
+		$defaultPB200: #ffab91 !global;
+		$defaultPB300: #ff8a65 !global;
+		$defaultPB400: #ff7043 !global;
+		$defaultPB500: #ff5722 !global;
+		$defaultPB600: #f4511e !global;
+		$defaultPB700: #e64a19 !global;
+		$defaultPB800: #d84315 !global;
+		$defaultPB900: #bf360c !global;
+		$defaultPBA100: #ff9e80 !global;
+		$defaultPBA200: #ff6e40 !global;
+		$defaultPBA400: #ff3d00 !global;
+		$defaultPBA700: #dd2c00 !global;
+	}
+	@else if $a==brown {
+		$defaultPB50: #efebe9 !global;
+		$defaultPB100: #d7ccc8 !global;
+		$defaultPB200: #bcaaa4 !global;
+		$defaultPB300: #a1887f !global;
+		$defaultPB400: #8d6e63 !global;
+		$defaultPB500: #795548 !global;
+		$defaultPB600: #6d4c41 !global;
+		$defaultPB700: #5d4037 !global;
+		$defaultPB800: #4e342e !global;
+		$defaultPB900: #3e2723 !global;
+		$defaultPBA100: #d7ccc8 !global;
+		$defaultPBA200: #bcaaa4 !global;
+		$defaultPBA400: #8d6e63 !global;
+		$defaultPBA700: #5d4037 !global;
+	}
+	@else if $a==grey {
+		$defaultPB50: #fafafa !global;
+		$defaultPB100: #f5f5f5 !global;
+		$defaultPB200: #eeeeee !global;
+		$defaultPB300: #e0e0e0 !global;
+		$defaultPB400: #bdbdbd !global;
+		$defaultPB500: #9e9e9e;
+		$defaultPB600: #757575 !global;
+		$defaultPB700: #616161 !global;
+		$defaultPB800: #424242 !global;
+		$defaultPB900: #212121 !global;
+		$defaultPBA100: #f5f5f5 !global;
+		$defaultPBA200: #eeeeee !global;
+		$defaultPBA400: #bdbdbd !global;
+		$defaultPBA700: #616161 !global;
+	}
+	@else if $a==blue-grey {
+		$defaultPB50: #eceff1 !global;
+		$defaultPB100: #cfd8dc !global;
+		$defaultPB200: #b0bec5 !global;
+		$defaultPB300: #90a4ae !global;
+		$defaultPB400: #78909c !global;
+		$defaultPB500: #607d8b !global;
+		$defaultPB600: #546e7a !global;
+		$defaultPB700: #455a64 !global;
+		$defaultPB800: #37474f !global;
+		$defaultPB900: #263238 !global;
+		$defaultPBA100: #cfd8dc !global;
+		$defaultPBA200: #b0bec5 !global;
+		$defaultPBA400: #78909c !global;
+		$defaultPBA700: #455a64 !global;
+	}
+	@else if $a==pb {
+		$defaultPB50: #e4f7ff !global;
+		$defaultPB100: #98deff !global;
+		$defaultPB200: #60cdff !global;
+		$defaultPB300: #18b6ff !global;
+		$defaultPB400: #00aaf9 !global;
+		$defaultPB500: #0095da !global;
+		$defaultPB600: #0080bb !global;
+		$defaultPB700: #006b9d !global;
+		$defaultPB800: #00567e !global;
+		$defaultPB900: #004160 !global;
+		$defaultPBA100: #e4f7ff !global;
+		$defaultPBA200: #98deff !global;
+		$defaultPBA400: #00aaf9 !global;
+		$defaultPBA700: #006b9d !global;
+	} //// ACCENT
+	@if $b==red {
+		$accentPB50: #ffebee !global;
+		$accentPB100: #ffcdd2 !global;
+		$accentPB200: #ef9a9a !global;
+		$accentPB300: #e57373 !global;
+		$accentPB400: #ef5350 !global;
+		$accentPB500: #f44336 !global;
+		$accentPB600: #e53935 !global;
+		$accentPB700: #d32f2f !global;
+		$accentPB800: #c62828 !global;
+		$accentPB900: #b71c1c !global;
+		$accentPBA100: #ff8a80 !global;
+		$accentPBA200: #ff5252 !global;
+		$accentPBA400: #ff1744 !global;
+		$accentPBA700: #d50000 !global;
+	}
+	@else if $b==pink {
+		$accentPB50: #fce4ec !global;
+		$accentPB100: #f8bbd0 !global;
+		$accentPB200: #f48fb1 !global;
+		$accentPB300: #f06292 !global;
+		$accentPB400: #ec407a !global;
+		$accentPB500: #e91e63 !global;
+		$accentPB600: #d81b60 !global;
+		$accentPB700: #c2185b !global;
+		$accentPB800: #ad1457 !global;
+		$accentPB900: #880e4f !global;
+		$accentPBA100: #ff80ab !global;
+		$accentPBA200: #ff4081 !global;
+		$accentPBA400: #f50057 !global;
+		$accentPBA700: #c51162 !global;
+	}
+	@else if $b==purple {
+		$accentPB50: #f3e5f5 !global;
+		$accentPB100: #e1bee7 !global;
+		$accentPB200: #ce93d8 !global;
+		$accentPB300: #ba68c8 !global;
+		$accentPB400: #ab47bc !global;
+		$accentPB500: #9c27b0 !global;
+		$accentPB600: #8e24aa !global;
+		$accentPB700: #7b1fa2 !global;
+		$accentPB800: #6a1b9a !global;
+		$accentPB900: #4a148c !global;
+		$accentPBA100: #ea80fc !global;
+		$accentPBA200: #e040fb !global;
+		$accentPBA400: #d500f9 !global;
+		$accentPBA700: #aa00ff !global;
+	}
+	@else if $b==deep-purple {
+		$accentPB50: #ede7f6 !global;
+		$accentPB100: #d1c4e9 !global;
+		$accentPB200: #b39ddb !global;
+		$accentPB300: #9575cd !global;
+		$accentPB400: #7e57c2 !global;
+		$accentPB500: #673ab7 !global;
+		$accentPB600: #5e35b1 !global;
+		$accentPB700: #512da8 !global;
+		$accentPB800: #4527a0 !global;
+		$accentPB900: #311b92 !global;
+		$accentPBA100: #b388ff !global;
+		$accentPBA200: #7c4dff !global;
+		$accentPBA400: #651fff !global;
+		$accentPBA700: #6200ea !global;
+	}
+	@else if $b==indigo {
+		$accentPB50: #e8eaf6 !global;
+		$accentPB100: #c5cae9 !global;
+		$accentPB200: #9fa8da !global;
+		$accentPB300: #7986cb !global;
+		$accentPB400: #5c6bc0 !global;
+		$accentPB500: #3f51b5 !global;
+		$accentPB600: #3949ab !global;
+		$accentPB700: #303f9f !global;
+		$accentPB800: #283593 !global;
+		$accentPB900: #1a237e !global;
+		$accentPBA100: #8c9eff !global;
+		$accentPBA200: #536dfe !global;
+		$accentPBA400: #3d5afe !global;
+		$accentPBA700: #304ffe !global;
+	}
+	@else if $b==blue {
+		$accentPB50: #e3f2fd !global;
+		$accentPB100: #bbdefb !global;
+		$accentPB200: #90caf9 !global;
+		$accentPB300: #64b5f6 !global;
+		$accentPB400: #42a5f5 !global;
+		$accentPB500: #2196f3 !global;
+		$accentPB600: #1e88e5 !global;
+		$accentPB700: #1976d2 !global;
+		$accentPB800: #1565c0 !global;
+		$accentPB900: #0d47a1 !global;
+		$accentPBA100: #82b1ff !global;
+		$accentPBA200: #448aff !global;
+		$accentPBA400: #2979ff !global;
+		$accentPBA700: #2962ff !global;
+	}
+	@else if $b==light-blue {
+		$accentPB50: #e1f5fe !global;
+		$accentPB100: #b3e5fc !global;
+		$accentPB200: #81d4fa !global;
+		$accentPB300: #4fc3f7 !global;
+		$accentPB400: #29b6f6 !global;
+		$accentPB500: #03a9f4 !global;
+		$accentPB600: #039be5 !global;
+		$accentPB700: #0288d1 !global;
+		$accentPB800: #0277bd !global;
+		$accentPB900: #01579b !global;
+		$accentPBA100: #80d8ff !global;
+		$accentPBA200: #40c4ff !global;
+		$accentPBA400: #00b0ff !global;
+		$accentPBA700: #0091ea !global;
+	}
+	@else if $b==cyan {
+		$accentPB50: #e0f7fa !global;
+		$accentPB100: #b2ebf2 !global;
+		$accentPB200: #80deea !global;
+		$accentPB300: #4dd0e1 !global;
+		$accentPB400: #26c6da !global;
+		$accentPB500: #00bcd4 !global;
+		$accentPB600: #00acc1 !global;
+		$accentPB700: #0097a7 !global;
+		$accentPB800: #00838f !global;
+		$accentPB900: #006064 !global;
+		$accentPBA100: #84ffff !global;
+		$accentPBA200: #18ffff !global;
+		$accentPBA400: #00e5ff !global;
+		$accentPBA700: #00b8d4 !global;
+	}
+	@else if $b==teal {
+		$accentPB50: #e0f2f1 !global;
+		$accentPB100: #b2dfdb !global;
+		$accentPB200: #80cbc4 !global;
+		$accentPB300: #4db6ac !global;
+		$accentPB400: #26a69a !global;
+		$accentPB500: #009688 !global;
+		$accentPB600: #00897b !global;
+		$accentPB700: #00796b !global;
+		$accentPB800: #00695c !global;
+		$accentPB900: #004d40 !global;
+		$accentPBA100: #a7ffeb !global;
+		$accentPBA200: #64ffda !global;
+		$accentPBA400: #1de9b6 !global;
+		$accentPBA700: #00bfa5 !global;
+	}
+	@else if $b==green {
+		$accentPB50: #e8f5e9 !global;
+		$accentPB100: #c8e6c9 !global;
+		$accentPB200: #a5d6a7 !global;
+		$accentPB300: #81c784 !global;
+		$accentPB400: #66bb6a !global;
+		$accentPB500: #4caf50 !global;
+		$accentPB600: #43a047 !global;
+		$accentPB700: #388e3c !global;
+		$accentPB800: #2e7d32 !global;
+		$accentPB900: #1b5e20 !global;
+		$accentPBA100: #b9f6ca !global;
+		$accentPBA200: #69f0ae !global;
+		$accentPBA400: #00e676 !global;
+		$accentPBA700: #00c853 !global;
+	}
+	@else if $b==light-green {
+		$accentPB50: #f1f8e9 !global;
+		$accentPB100: #dcedc8 !global;
+		$accentPB200: #c5e1a5 !global;
+		$accentPB300: #aed581 !global;
+		$accentPB400: #9ccc65 !global;
+		$accentPB500: #8bc34a !global;
+		$accentPB600: #7cb342 !global;
+		$accentPB700: #689f38 !global;
+		$accentPB800: #558b2f !global;
+		$accentPB900: #33691e !global;
+		$accentPBA100: #ccff90 !global;
+		$accentPBA200: #b2ff59 !global;
+		$accentPBA400: #76ff03 !global;
+		$accentPBA700: #64dd17 !global;
+	}
+	@else if $b==lime {
+		$accentPB50: #f9fbe7 !global;
+		$accentPB100: #f0f4c3 !global;
+		$accentPB200: #e6ee9c !global;
+		$accentPB300: #dce775 !global;
+		$accentPB400: #d4e157 !global;
+		$accentPB500: #cddc39 !global;
+		$accentPB600: #c0ca33 !global;
+		$accentPB700: #afb42b !global;
+		$accentPB800: #9e9d24 !global;
+		$accentPB900: #827717 !global;
+		$accentPBA100: #f4ff81 !global;
+		$accentPBA200: #eeff41 !global;
+		$accentPBA400: #c6ff00 !global;
+		$accentPBA700: #aeea00 !global;
+	}
+	@else if $b==yellow {
+		$accentPB50: #fffde7 !global;
+		$accentPB100: #fff9c4 !global;
+		$accentPB200: #fff59d !global;
+		$accentPB300: #fff176 !global;
+		$accentPB400: #ffee58 !global;
+		$accentPB500: #ffeb3b !global;
+		$accentPB600: #fdd835 !global;
+		$accentPB700: #fbc02d !global;
+		$accentPB800: #f9a825 !global;
+		$accentPB900: #f57f17 !global;
+		$accentPBA100: #ffff8d !global;
+		$accentPBA200: #ffff00 !global;
+		$accentPBA400: #ffea00 !global;
+		$accentPBA700: #ffd600 !global;
+	}
+	@else if $b==amber {
+		$accentPB50: #fff8e1 !global;
+		$accentPB100: #ffecb3 !global;
+		$accentPB200: #ffe082 !global;
+		$accentPB300: #ffd54f !global;
+		$accentPB400: #ffca28 !global;
+		$accentPB500: #ffc107 !global;
+		$accentPB600: #ffb300 !global;
+		$accentPB700: #ffa000 !global;
+		$accentPB800: #ff8f00 !global;
+		$accentPB900: #ff6f00 !global;
+		$accentPBA100: #ffe57f !global;
+		$accentPBA200: #ffd740 !global;
+		$accentPBA400: #ffc400 !global;
+		$accentPBA700: #ffab00 !global;
+	}
+	@else if $b==orange {
+		$accentPB50: #fff3e0 !global;
+		$accentPB100: #ffe0b2 !global;
+		$accentPB200: #ffcc80 !global;
+		$accentPB300: #ffb74d !global;
+		$accentPB400: #ffa726 !global;
+		$accentPB500: #ff9800 !global;
+		$accentPB600: #fb8c00 !global;
+		$accentPB700: #f57c00 !global;
+		$accentPB800: #ef6c00 !global;
+		$accentPB900: #e65100 !global;
+		$accentPBA100: #ffd180 !global;
+		$accentPBA200: #ffab40 !global;
+		$accentPBA400: #ff9100 !global;
+		$accentPBA700: #ff6d00 !global;
+	}
+	@else if $b==deep-orange {
+		$accentPB50: #fbe9e7 !global;
+		$accentPB100: #ffccbc !global;
+		$accentPB200: #ffab91 !global;
+		$accentPB300: #ff8a65 !global;
+		$accentPB400: #ff7043 !global;
+		$accentPB500: #ff5722 !global;
+		$accentPB600: #f4511e !global;
+		$accentPB700: #e64a19 !global;
+		$accentPB800: #d84315 !global;
+		$accentPB900: #bf360c !global;
+		$accentPBA100: #ff9e80 !global;
+		$accentPBA200: #ff6e40 !global;
+		$accentPBA400: #ff3d00 !global;
+		$accentPBA700: #dd2c00 !global;
+	}
+	@else if $b==brown {
+		$accentPB50: #efebe9 !global;
+		$accentPB100: #d7ccc8 !global;
+		$accentPB200: #bcaaa4 !global;
+		$accentPB300: #a1887f !global;
+		$accentPB400: #8d6e63 !global;
+		$accentPB500: #795548 !global;
+		$accentPB600: #6d4c41 !global;
+		$accentPB700: #5d4037 !global;
+		$accentPB800: #4e342e !global;
+		$accentPB900: #3e2723 !global;
+		$accentPBA100: #d7ccc8 !global;
+		$accentPBA200: #bcaaa4 !global;
+		$accentPBA400: #8d6e63 !global;
+		$accentPBA700: #5d4037 !global;
+	}
+	@else if $b==grey {
+		$accentPB50: #fafafa !global;
+		$accentPB100: #f5f5f5 !global;
+		$accentPB200: #eeeeee !global;
+		$accentPB300: #e0e0e0 !global;
+		$accentPB400: #bdbdbd !global;
+		$accentPB500: #9e9e9e !global;
+		$accentPB600: #757575 !global;
+		$accentPB700: #616161 !global;
+		$accentPB800: #424242 !global;
+		$accentPB900: #212121 !global;
+		$accentPBA100: #f5f5f5 !global;
+		$accentPBA200: #eeeeee !global;
+		$accentPBA400: #bdbdbd !global;
+		$accentPBA700: #616161 !global;
+	}
+	@else if $b==blue-grey {
+		$accentPB50: #eceff1 !global;
+		$accentPB100: #cfd8dc !global;
+		$accentPB200: #b0bec5 !global;
+		$accentPB300: #90a4ae !global;
+		$accentPB400: #78909c !global;
+		$accentPB500: #607d8b !global;
+		$accentPB600: #546e7a !global;
+		$accentPB700: #455a64 !global;
+		$accentPB800: #37474f !global;
+		$accentPB900: #263238 !global;
+		$accentPBA100: #cfd8dc !global;
+		$accentPBA200: #b0bec5 !global;
+		$accentPBA400: #78909c !global;
+		$accentPBA700: #455a64 !global;
+	}
+	@else if $b==pb {
+		$accentPB50: #fce4ec !global;
+		$accentPB100: #f8bbd0 !global;
+		$accentPB200: #f48fb1 !global;
+		$accentPB300: #f06292 !global;
+		$accentPB400: #ec407a !global;
+		$accentPB500: #e91e63 !global;
+		$accentPB600: #d81b60 !global;
+		$accentPB700: #c2185b !global;
+		$accentPB800: #ad1457 !global;
+		$accentPB900: #880e4f !global;
+		$accentPBA100: #ff80ab !global;
+		$accentPBA200: #ff4081 !global;
+		$accentPBA400: #f50057 !global;
+		$accentPBA700: #c51162 !global;
+	} //// COMPLEMENTARY
+	@if $c==red {
+		$compPB50: #ffebee !global;
+		$compPB100: #ffcdd2 !global;
+		$compPB200: #ef9a9a !global;
+		$compPB300: #e57373 !global;
+		$compPB400: #ef5350 !global;
+		$compPB500: #f44336 !global;
+		$compPB600: #e53935 !global;
+		$compPB700: #d32f2f !global;
+		$compPB800: #c62828 !global;
+		$compPB900: #b71c1c !global;
+		$compPBA100: #ff8a80 !global;
+		$compPBA200: #ff5252 !global;
+		$compPBA400: #ff1744 !global;
+		$compPBA700: #d50000 !global;
+	}
+	@else if $c==pink {
+		$compPB50: #fce4ec !global;
+		$compPB100: #f8bbd0 !global;
+		$compPB200: #f48fb1 !global;
+		$compPB300: #f06292 !global;
+		$compPB400: #ec407a !global;
+		$compPB500: #e91e63 !global;
+		$compPB600: #d81b60 !global;
+		$compPB700: #c2185b !global;
+		$compPB800: #ad1457 !global;
+		$compPB900: #880e4f !global;
+		$compPBA100: #ff80ab !global;
+		$compPBA200: #ff4081 !global;
+		$compPBA400: #f50057 !global;
+		$compPBA700: #c51162 !global;
+	}
+	@else if $c==purple {
+		$compPB50: #f3e5f5 !global;
+		$compPB100: #e1bee7 !global;
+		$compPB200: #ce93d8 !global;
+		$compPB300: #ba68c8 !global;
+		$compPB400: #ab47bc !global;
+		$compPB500: #9c27b0 !global;
+		$compPB600: #8e24aa !global;
+		$compPB700: #7b1fa2 !global;
+		$compPB800: #6a1b9a !global;
+		$compPB900: #4a148c !global;
+		$compPBA100: #ea80fc !global;
+		$compPBA200: #e040fb !global;
+		$compPBA400: #d500f9 !global;
+		$compPBA700: #aa00ff !global;
+	}
+	@else if $c==deep-purple {
+		$compPB50: #ede7f6 !global;
+		$compPB100: #d1c4e9 !global;
+		$compPB200: #b39ddb !global;
+		$compPB300: #9575cd !global;
+		$compPB400: #7e57c2 !global;
+		$compPB500: #673ab7 !global;
+		$compPB600: #5e35b1 !global;
+		$compPB700: #512da8 !global;
+		$compPB800: #4527a0 !global;
+		$compPB900: #311b92 !global;
+		$compPBA100: #b388ff !global;
+		$compPBA200: #7c4dff !global;
+		$compPBA400: #651fff !global;
+		$compPBA700: #6200ea !global;
+	}
+	@else if $c==indigo {
+		$compPB50: #e8eaf6 !global;
+		$compPB100: #c5cae9 !global;
+		$compPB200: #9fa8da !global;
+		$compPB300: #7986cb !global;
+		$compPB400: #5c6bc0 !global;
+		$compPB500: #3f51b5 !global;
+		$compPB600: #3949ab !global;
+		$compPB700: #303f9f !global;
+		$compPB800: #283593 !global;
+		$compPB900: #1a237e !global;
+		$compPBA100: #8c9eff !global;
+		$compPBA200: #536dfe !global;
+		$compPBA400: #3d5afe !global;
+		$compPBA700: #304ffe !global;
+	}
+	@else if $c==blue {
+		$compPB50: #e3f2fd !global;
+		$compPB100: #bbdefb !global;
+		$compPB200: #90caf9 !global;
+		$compPB300: #64b5f6 !global;
+		$compPB400: #42a5f5 !global;
+		$compPB500: #2196f3 !global;
+		$compPB600: #1e88e5 !global;
+		$compPB700: #1976d2 !global;
+		$compPB800: #1565c0 !global;
+		$compPB900: #0d47a1 !global;
+		$compPBA100: #82b1ff !global;
+		$compPBA200: #448aff !global;
+		$compPBA400: #2979ff !global;
+		$compPBA700: #2962ff !global;
+	}
+	@else if $c==light-blue {
+		$compPB50: #e1f5fe !global;
+		$compPB100: #b3e5fc !global;
+		$compPB200: #81d4fa !global;
+		$compPB300: #4fc3f7 !global;
+		$compPB400: #29b6f6 !global;
+		$compPB500: #03a9f4 !global;
+		$compPB600: #039be5 !global;
+		$compPB700: #0288d1 !global;
+		$compPB800: #0277bd !global;
+		$compPB900: #01579b !global;
+		$compPBA100: #80d8ff !global;
+		$compPBA200: #40c4ff !global;
+		$compPBA400: #00b0ff !global;
+		$compPBA700: #0091ea !global;
+	}
+	@else if $c==cyan {
+		$compPB50: #e0f7fa !global;
+		$compPB100: #b2ebf2 !global;
+		$compPB200: #80deea !global;
+		$compPB300: #4dd0e1 !global;
+		$compPB400: #26c6da !global;
+		$compPB500: #00bcd4 !global;
+		$compPB600: #00acc1 !global;
+		$compPB700: #0097a7 !global;
+		$compPB800: #00838f !global;
+		$compPB900: #006064 !global;
+		$compPBA100: #84ffff !global;
+		$compPBA200: #18ffff !global;
+		$compPBA400: #00e5ff !global;
+		$compPBA700: #00b8d4 !global;
+	}
+	@else if $c==teal {
+		$compPB50: #e0f2f1 !global;
+		$compPB100: #b2dfdb !global;
+		$compPB200: #80cbc4 !global;
+		$compPB300: #4db6ac !global;
+		$compPB400: #26a69a !global;
+		$compPB500: #009688 !global;
+		$compPB600: #00897b !global;
+		$compPB700: #00796b !global;
+		$compPB800: #00695c !global;
+		$compPB900: #004d40 !global;
+		$compPBA100: #a7ffeb !global;
+		$compPBA200: #64ffda !global;
+		$compPBA400: #1de9b6 !global;
+		$compPBA700: #00bfa5 !global;
+	}
+	@else if $c==green {
+		$compPB50: #e8f5e9 !global;
+		$compPB100: #c8e6c9 !global;
+		$compPB200: #a5d6a7 !global;
+		$compPB300: #81c784 !global;
+		$compPB400: #66bb6a !global;
+		$compPB500: #4caf50 !global;
+		$compPB600: #43a047 !global;
+		$compPB700: #388e3c !global;
+		$compPB800: #2e7d32 !global;
+		$compPB900: #1b5e20 !global;
+		$compPBA100: #b9f6ca !global;
+		$compPBA200: #69f0ae !global;
+		$compPBA400: #00e676 !global;
+		$compPBA700: #00c853 !global;
+	}
+	@else if $c==light-green {
+		$compPB50: #f1f8e9 !global;
+		$compPB100: #dcedc8 !global;
+		$compPB200: #c5e1a5 !global;
+		$compPB300: #aed581 !global;
+		$compPB400: #9ccc65 !global;
+		$compPB500: #8bc34a !global;
+		$compPB600: #7cb342 !global;
+		$compPB700: #689f38 !global;
+		$compPB800: #558b2f !global;
+		$compPB900: #33691e !global;
+		$compPBA100: #ccff90 !global;
+		$compPBA200: #b2ff59 !global;
+		$compPBA400: #76ff03 !global;
+		$compPBA700: #64dd17 !global;
+	}
+	@else if $c==lime {
+		$compPB50: #f9fbe7 !global;
+		$compPB100: #f0f4c3 !global;
+		$compPB200: #e6ee9c !global;
+		$compPB300: #dce775 !global;
+		$compPB400: #d4e157 !global;
+		$compPB500: #cddc39 !global;
+		$compPB600: #c0ca33 !global;
+		$compPB700: #afb42b !global;
+		$compPB800: #9e9d24 !global;
+		$compPB900: #827717 !global;
+		$compPBA100: #f4ff81 !global;
+		$compPBA200: #eeff41 !global;
+		$compPBA400: #c6ff00 !global;
+		$compPBA700: #aeea00 !global;
+	}
+	@else if $c==yellow {
+		$compPB50: #fffde7 !global;
+		$compPB100: #fff9c4 !global;
+		$compPB200: #fff59d !global;
+		$compPB300: #fff176 !global;
+		$compPB400: #ffee58 !global;
+		$compPB500: #ffeb3b !global;
+		$compPB600: #fdd835 !global;
+		$compPB700: #fbc02d !global;
+		$compPB800: #f9a825 !global;
+		$compPB900: #f57f17 !global;
+		$compPBA100: #ffff8d !global;
+		$compPBA200: #ffff00 !global;
+		$compPBA400: #ffea00 !global;
+		$compPBA700: #ffd600 !global;
+	}
+	@else if $c==amber {
+		$compPB50: #fff8e1 !global;
+		$compPB100: #ffecb3 !global;
+		$compPB200: #ffe082 !global;
+		$compPB300: #ffd54f !global;
+		$compPB400: #ffca28 !global;
+		$compPB500: #ffc107 !global;
+		$compPB600: #ffb300 !global;
+		$compPB700: #ffa000 !global;
+		$compPB800: #ff8f00 !global;
+		$compPB900: #ff6f00 !global;
+		$compPBA100: #ffe57f !global;
+		$compPBA200: #ffd740 !global;
+		$compPBA400: #ffc400 !global;
+		$compPBA700: #ffab00 !global;
+	}
+	@else if $c==orange {
+		$compPB50: #fff3e0 !global;
+		$compPB100: #ffe0b2 !global;
+		$compPB200: #ffcc80 !global;
+		$compPB300: #ffb74d !global;
+		$compPB400: #ffa726 !global;
+		$compPB500: #ff9800 !global;
+		$compPB600: #fb8c00 !global;
+		$compPB700: #f57c00 !global;
+		$compPB800: #ef6c00 !global;
+		$compPB900: #e65100 !global;
+		$compPBA100: #ffd180 !global;
+		$compPBA200: #ffab40 !global;
+		$compPBA400: #ff9100 !global;
+		$compPBA700: #ff6d00 !global;
+	}
+	@else if $c==deep-orange {
+		$compPB50: #fbe9e7 !global;
+		$compPB100: #ffccbc !global;
+		$compPB200: #ffab91 !global;
+		$compPB300: #ff8a65 !global;
+		$compPB400: #ff7043 !global;
+		$compPB500: #ff5722 !global;
+		$compPB600: #f4511e !global;
+		$compPB700: #e64a19 !global;
+		$compPB800: #d84315 !global;
+		$compPB900: #bf360c !global;
+		$compPBA100: #ff9e80 !global;
+		$compPBA200: #ff6e40 !global;
+		$compPBA400: #ff3d00 !global;
+		$compPBA700: #dd2c00 !global;
+	}
+	@else if $c==brown {
+		$compPB50: #efebe9 !global;
+		$compPB100: #d7ccc8 !global;
+		$compPB200: #bcaaa4 !global;
+		$compPB300: #a1887f !global;
+		$compPB400: #8d6e63 !global;
+		$compPB500: #795548 !global;
+		$compPB600: #6d4c41 !global;
+		$compPB700: #5d4037 !global;
+		$compPB800: #4e342e !global;
+		$compPB900: #3e2723 !global;
+		$compPBA100: #d7ccc8 !global;
+		$compPBA200: #bcaaa4 !global;
+		$compPBA400: #8d6e63 !global;
+		$compPBA700: #5d4037 !global;
+	}
+	@else if $c==grey {
+		$compPB50: #fafafa !global;
+		$compPB100: #f5f5f5 !global;
+		$compPB200: #eeeeee !global;
+		$compPB300: #e0e0e0 !global;
+		$compPB400: #bdbdbd !global;
+		$compPB500: #9e9e9e !global;
+		$compPB600: #757575 !global;
+		$compPB700: #616161 !global;
+		$compPB800: #424242 !global;
+		$compPB900: #212121 !global;
+		$compPBA100: #f5f5f5 !global;
+		$compPBA200: #eeeeee !global;
+		$compPBA400: #bdbdbd !global;
+		$compPBA700: #616161 !global;
+	}
+	@else if $c==blue-grey {
+		$compPB50: #eceff1 !global;
+		$compPB100: #cfd8dc !global;
+		$compPB200: #b0bec5 !global;
+		$compPB300: #90a4ae !global;
+		$compPB400: #78909c !global;
+		$compPB500: #607d8b !global;
+		$compPB600: #546e7a !global;
+		$compPB700: #455a64 !global;
+		$compPB800: #37474f !global;
+		$compPB900: #263238 !global;
+		$compPBA100: #cfd8dc !global;
+		$compPBA200: #b0bec5 !global;
+		$compPBA400: #78909c !global;
+		$compPBA700: #455a64 !global;
+	}
+	@else if $c==pb {
+		$compPB50: #fafafa !global;
+		$compPB100: #f5f5f5 !global;
+		$compPB200: #eeeeee !global;
+		$compPB300: #e0e0e0 !global;
+		$compPB400: #bdbdbd !global;
+		$compPB500: #9e9e9e !global;
+		$compPB600: #757575 !global;
+		$compPB700: #616161 !global;
+		$compPB800: #424242 !global;
+		$compPB900: #212121 !global;
+		$compPBA100: #f5f5f5 !global;
+		$compPBA200: #eeeeee !global;
+		$compPBA400: #bdbdbd !global;
+		$compPBA700: #616161 !global;
+	}
+}

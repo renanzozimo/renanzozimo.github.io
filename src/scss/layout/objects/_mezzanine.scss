@@ -1,0 +1,31 @@
+.mezzanine-active {
+  @media (min-width: $screen-lg-min + px) {
+    width: calc(100% - #{$mezzanine-lg-size});
+  }
+}
+
+.mezzanine {
+  @extend .shadow-1;
+  transform: translateX(110%);
+  transition: transform 375ms cubic-bezier(0.0, 0.0, 0.2, 1) 0s;
+  right: 0;
+  z-index: $zindex-mezzanine;
+  @extend .fixed;
+  @media (min-width: $screen-lg-min + px) {
+    & {
+      width: $mezzanine-lg-size;
+      height: calc(100% - #{$bodyPaddingTopMenuResponse});
+      top: $bodyPaddingTopMenuResponse;
+    }
+  }
+  @media (max-width: $screen-md-max + px) {
+    & {
+      width: 100%;
+      height: 100% !important;
+      top: 0 !important;
+    }
+  }
+  &.active {
+    transform: translateX(0);
+  }
+}

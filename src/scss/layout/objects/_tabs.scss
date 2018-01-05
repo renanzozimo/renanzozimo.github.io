@@ -1,0 +1,32 @@
+.tabs {
+  overflow: hidden;
+  height: 47px;
+  .nav-tabs {
+    margin-bottom: 0;
+    overflow: auto;
+    padding: 0;
+    @extend .text-nowrap;
+    @extend .v-align-children;
+    li {
+      transition: color 0.3s ease 0s;
+      padding: $spacing-1 $spacing-2;
+      @extend .text-center;
+      @extend .relative;
+      @extend .cursor-pointer;
+      &::after {
+        content: "";
+        left: 0;
+        bottom: 0;
+        height: $spacingMini;
+        opacity: 0.4;
+        position: absolute;
+        transition: transform 375ms;
+        transform: scaleX(0);
+        width: 100%;
+      }
+      &.active::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.loading {
+  &:not(.white-loading)::before {
+    background-color: rgba($body-bg, 0.5);
+  }
+  &.loading-bg-white {
+    &::before {
+      background-color: rgba($whitePB, 0.6);
+    }
+  }
+  &::after {
+    background: transparent;
+  }
+  &:not([class*="loading-color-"])::after {
+    border-color: $accentPB $accentPB transparent transparent;
+  }
+  &.loading-color-white::after {
+    border-color: $whitePB $whitePB transparent transparent;
+  }
+  &.loading-color-primary::after {
+    border-color: $defaultPB $defaultPB transparent transparent;
+  }
+}

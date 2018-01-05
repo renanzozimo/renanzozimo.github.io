@@ -1,0 +1,40 @@
+.card {
+  transition: all 300ms ease-in-out 0s;
+  border-radius: $radius;
+  margin-bottom: $spacing-1 * 2;
+  & {
+    @extend .shadow-1;
+  }
+  &.interactive {
+    @extend .cursor-pointer;
+  }
+}
+
+.card-header,
+.card-footer {
+  border-width: 1px 0;
+  padding: $spacing-1;
+  @extend .justify-children;
+}
+
+.bordered {
+  &.card-header {
+    border-bottom-style: solid;
+  }
+  &.card-footer {
+    border-top-style: solid;
+  }
+}
+
+.card-body {
+  img {
+    max-width: 100%;
+  }
+  &:first-child img {
+    @include border-top-radius($radiusUnity);
+  }
+  .image-container {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}

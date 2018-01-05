@@ -1,0 +1,142 @@
+textarea {
+  padding: ceil($spacing-1 / 2) ($validate-icon-font-size + 10 + 17) $spacing-1 $spacing-1;
+  transition: border 0.2s ease 0s;
+  border-bottom-width: 2px;
+  width: 100%;
+  .form-group.is-focused & {
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+  }
+}
+
+input {
+  &[type="email"],
+  &[type="password"],
+  &[type="text"],
+  &[type="number"],
+  &[type="date"],
+  &[type="datetime"],
+  &[type="datetime-local"],
+  &[type="tel"],
+  &[type="time"] {
+    &:not(.no-feedback-validation) {
+      padding-right: ($validate-icon-font-size + 10);
+    }
+    &.no-feedback-validation {
+      padding-right: $spacing-1;
+    }
+    padding-left: $spacing-1;
+  }
+  &[type="checkbox"],
+  &[type="radio"] {
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    @extend .cursor-pointer;
+    +div {
+      height: 24px;
+      overflow: hidden;
+      position: relative;
+      transition: color 375ms ease 0s;
+      white-space: nowrap;
+      width: 24px;
+      i {
+        overflow: hidden;
+        position: absolute;
+        transition: width 300ms ease 0s;
+        &:last-child {
+          width: 0;
+        }
+      }
+    }
+    &:checked+div i:last-child {
+      width: 24px;
+    }
+  }
+  //STATUS and STATE
+  &:invalid {
+    box-shadow: unset;
+  }
+  &:valid {
+    box-shadow: usent;
+  }
+}
+
+.checkbox-multiple,
+.radio {
+  width: 100%;
+  @media (min-width: $screen-sm-min + px) {
+    & {
+      width: auto;
+    }
+  }
+  label {
+    max-width: calc(100% - $spacing-2);
+    @media (min-width: $screen-sm-min + px) {
+      & {
+        max-width: none;
+      }
+    }
+  }
+  .content {
+    margin-bottom: $spacing-1;
+    @extend .relative;
+    @extend .v-align-children;
+    @extend .cursor-pointer;
+    &:only-child {
+      margin-bottom: 0;
+    }
+  }
+  &.inline {
+    @extend .v-align-children;
+    .content {
+      width: 100%;
+      margin-right: $spacing-1;
+      @media (min-width: $screen-sm-min + px) {
+        & {
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+.checkbox .content {
+  @extend .v-align-children;
+}
+
+.select-input select {
+  .form-group:not(.no-feedback-validation) & {
+    padding-right: $select-caret-font-size + $validate-icon-font-size + 20;
+  }
+  .form-group.no-feedback-validation & {
+    padding-right: $select-caret-font-size + 20;
+  }
+}
+
+.select-input {
+  border-width: 0;
+  position: relative;
+  border-radius: $radius;
+  z-index: 1;
+  width: 100%;
+  select {
+    background-color: transparent;
+    padding-left: (($spacing-1 / 3) * 2);
+    text-overflow: ellipsis;
+    @extend .text-ellipsis;
+    width: 100%;
+  }
+  i.caret {
+    position: absolute;
+    right: $spacingMini;
+    top: round($inputHeight/2);
+    font-size: $select-caret-font-size;
+    margin-top: round($select-caret-font-size/2 * -1);
+    z-index: -1;
+  }
+}

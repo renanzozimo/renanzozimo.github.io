@@ -1,0 +1,52 @@
+
+//SETTINGS
+@import "layout/settings/variables";
+@import "layout/settings/grid-variables";
+
+//MIXINS
+@import "layout/mixins/border-radius";
+@import "layout/mixins/box-sizing";
+@import "layout/mixins/buttons";
+@import "layout/mixins/clearfix";
+@import "layout/mixins/grid";
+@import "layout/mixins/img-responsive";
+@import "layout/mixins/list-unstyled";
+@import "layout/mixins/shadows";
+@import "layout/mixins/trumps";
+@import "layout/mixins/v-align-children";
+
+//GENERIC
+@import "layout/generic/reset";
+
+//BASE
+@import "layout/base/grids";;
+@import "layout/base/document";
+@import "layout/base/inputs";
+@import "layout/base/tables";
+@import "layout/base/typography";
+
+//OBJECTS
+@import "layout/objects/buttons";
+@import "layout/objects/cards";
+@import "layout/objects/chips";
+@import "layout/objects/dropdown";
+@import "layout/objects/forms";
+@import "layout/objects/icons-material-design";
+@import "layout/objects/icons";
+@import "layout/objects/input-groups";
+@import "layout/objects/inputs";
+@import "layout/objects/justify-children";
+@import "layout/objects/lists";
+@import "layout/objects/loading";
+@import "layout/objects/mezzanine";
+@import "layout/objects/modals";
+@import "layout/objects/structure-component";
+@import "layout/objects/table";
+@import "layout/objects/tabs";
+@import "layout/objects/typography";
+
+//COMPONENTS --- added according to project singularity
+@import "../layout-components";
+
+//TRUMPS
+@import "layout/trumps/trumps";

@@ -1,0 +1,27 @@
+table {
+  width: 100%;
+  max-width: 100%;
+}
+
+td,
+th {
+  line-height: $line-height-base;
+  vertical-align: middle;
+  border-top-style: solid;
+  word-wrap: break-word;
+  table:not(.table-card) & {
+    padding: $spacing-1;
+  }
+}
+
+th {
+  text-align: left;
+  border-top-width: 0;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  position: relative;
+}
+
+td {
+  border-top-width: 0;
+}

@@ -1,0 +1,11 @@
+// The dropdown menu (ul)
+.dropdown-menu {
+  background-color: $whitePB;
+  &::before,
+  &::after {
+    background-color: $whitePB;
+  }
+  .divider {
+    background-color: $textDivadersBlack;
+  }
+}

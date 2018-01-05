@@ -1,0 +1,72 @@
+.structure {
+  display: flex;
+  flex-flow: column;
+  &:not(.no-rounded)>*:first-child {
+    @include border-top-radius($radiusUnity);
+  }
+  &:not(.no-rounded)>*:last-child {
+    @include border-bottom-radius($radiusUnity);
+  }
+}
+
+.structure {
+  height: 100%;
+  @extend .relative;
+}
+
+.structure-header,
+.structure-footer {
+  @extend .justify-children;
+}
+
+.structure-header {
+  padding: $spacing-1 $spacing-1 $spacing-1 $spacing-2;
+}
+
+.structure-footer {
+  padding: $spacing-1;
+}
+
+.structure-body {
+  overflow: hidden;
+  height: 100%;
+  padding-left: $spacing-2;
+  padding-right: $spacing-2;
+}
+
+.overflow-limiter {
+  padding-right: $spacing-1;
+  &:not(.mg-rt-1-negative):not([class*="mg-rt"]) {
+    margin-right: $spacing-2 * -1;
+  }
+  &.mg-rt-1-negative {
+    margin-right: $spacing-1 * -1;
+  }
+  height: 100%;
+  padding-top: $spacing-1;
+  &:not(.multidirectional) {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  &.multidirectional {
+    overflow: auto;
+  }
+}
+
+//BORDERS
+.structure-header,
+.structure-sub-header,
+.structure-footer {
+  &:not(.no-border):not(:only-child) {
+    border-style: solid;
+  }
+}
+
+.structure-header,
+.structure-sub-header {
+  border-width: 0 0 1px;
+}
+
+.structure-footer {
+  border-width: 1px 0 0;
+}
