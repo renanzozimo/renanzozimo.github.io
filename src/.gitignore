@@ -6,7 +6,6 @@
 *.exe
 *.o
 *.so
-*.bat
 
 # Packages #
 ############
@@ -38,3 +37,4 @@ ehthumbs.db
 Thumbs.db
 
 .sass-cache
+*.bat
