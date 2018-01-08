@@ -31,6 +31,38 @@ myApp.controller('MainController', ['$scope', '$timeout', function MainControlle
     
   };
 
+
+  $scope.showPlaceholder = false;
+  $scope.fixedClassTh = false;
+
+  let thead = document.getElementById('skills-thead');
+  let theadTr = document.getElementById('skills-thead-tr');
+  let th = document.getElementById('th-to-height');
+  let placeholder = document.getElementById('placeholder-th')
+  let theadTrHeight = theadTr.clientHeight;
+  
+  const setHeightTo = e => {
+    e.style.height = theadTrHeight + 'px';  
+  }
+
+  setHeightTo(placeholder);
+  setHeightTo(th);
+
+  window.onscroll = function() {
+
+    let theadPosition = thead.getBoundingClientRect().top;
+
+    if (theadPosition < 0) {
+      $scope.showPlaceholder = true;
+      $scope.fixedClassTh = true;
+      
+    } else {
+      $scope.showPlaceholder = false;
+      $scope.fixedClassTh = false;
+    }
+    $scope.$digest();
+};
+
   //scroll
   function scrollTo(element, to, duration) {
 

@@ -6,14 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme-color" content="#009688">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portifólio detalhado de Renan Zózimo, de Belo Horizonte, Web Designer na Prime Systems, UX Designer e algumas vezes Front-end developer." />
-  
+  <meta name="description" content="Portifólio detalhado de Renan Zózimo, de Belo Horizonte, Web Designer na Prime Systems, UX Designer e algumas vezes Front-end developer." />  
 
   <title>Renan Zózimo</title>
 
   <link rel="icon" sizes="192x192" href="src/imgs/logo192.png">
   <link rel="alternate" hreflang="pt-br" href="https://renanzozimo.github.io/"/>
-  
+
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="src/css/layout.css">
@@ -37,7 +36,7 @@
               </a>
             </div>
             <div class="flex-start- text-center-xssm-down center">
-              <img class="fully-rounded flex-shrink-0 mg-rt-1 mg-bt-1-xssm-down" src="src/imgs/renan-zozimo.jpg" alt="Renan Zozimo foto" title="Renan Zozimo" style="width: 150px; max-width: 40%;">
+              <img class="fully-rounded flex-shrink-0 mg-rt-1 mg-bt-1-xssm-down" src="src/imgs/renan zozimo.jpg" alt="Renan Zozimo foto" title="Renan Zozimo" style="width: 150px; max-width: 40%;">
               <div>
                 <h1 class="display-2" style="line-height: 1; transform: translateX(-3px)">Renan Zózimo</h1>
                 <p class="color text-secondary-white mg-bt-1">{{description}}</p>
@@ -164,10 +163,16 @@
       </article>
       <article class="col-xs-12 mg-bt-2">
         <h4 class="mg-bt-1">Habilidades</h4>
-        <table id="skills-table" class="table-card" ng-controller="SkillsController">
-          <thead>
-            <tr>
+        <table id="skills-table" class="table-card" ng-controller="SkillsController" style="table-layout: fixed;">
+          <thead id="skills-thead">
+            <tr ng-show="showPlaceholder">
+              <th id="placeholder-th"></th>
               <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+            <tr id="skills-thead-tr" ng-class="{'fixed container pd-0-force' : fixedClassTh}">
+              <th id="th-to-height"></th>
               <th class="body-2 v-align-children text-nowrap cursor-pointer" ng-click="sortBy('xp')">
                 <span class="mg-rt-mini">Experiência</span>
                 <div class="color text-disabled-black mg-lt-15 clearfix" style="width: 38px;">

@@ -10,7 +10,6 @@ li {
 @media (min-width: $screen-lg-min + px) {
   body.react-to-mezzanine {
     width: calc(100% - #{$mezzanine-lg-size});
-
     .hidden-sm-down-force {
       display: none !important;
     }
@@ -127,5 +126,15 @@ a.line {
     &.center {
       align-items: center;
     }
+  }
+}
+
+tr.fixed {
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding-right: 30px !important;
+  th {
+    width: 25%;
   }
 }
