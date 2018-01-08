@@ -129,7 +129,7 @@ myApp.controller('SkillsController', ['$scope', function ($scope) {
       'type': 'Front'
     },
     {
-      'name': 'JS',
+      'name': 'JS (ES6)',
       'lvl': 3,
       'expect': 5,
       'xp': 4,

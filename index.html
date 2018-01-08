@@ -19,7 +19,7 @@
           <div class="col-xs-12" ng-controller="HeaderController">
             <div class="btn-group text-right">
               <a class="btn type-flat color-white" target="_blank" href="http://www.linkedin.com/in/renanzozimo">
-                <span class="caption mg-rt-mini color text-secondary-white text-lowercase">linkedIn/renanzozimo</span>
+                <span class="mg-rt-mini color text-secondary-white text-lowercase">linkedIn/renanzozimo</span>
                 <img src="src/imgs/linkedin.svg" alt="linkedin" style="width: 24px;">
               </a>
             </div>
@@ -54,9 +54,9 @@
           <div class="full-width">
             <p class="subheading">Prime Systems</p>
             <p><small>UX Designer + Front end developer</small></p>
-            <div class="btn-group text-right mg-tp-mini">
+            <!-- <div class="btn-group text-right mg-tp-mini">
               <button class="btn type-flat color-accent">+ detalhes</button>
-            </div>
+            </div> -->
           </div>
         </section>
         <section class="card flex-start top pd-1">
@@ -64,11 +64,16 @@
           <div class="full-width">
             <p class="subheading">Portal UAI</p>
             <p><small>Aux. Produção de Internet</small></p>
-            <div class="btn-group text-right mg-tp-mini">
+            <!-- <div class="btn-group text-right mg-tp-mini">
               <button class="btn type-flat color-accent">+ detalhes</button>
-            </div>
+            </div> -->
           </div>
         </section>
+        <div class="text-right">
+          <a class="btn inline-block type-flat color-accent" target="_blank" href="http://www.linkedin.com/in/renanzozimo">
+            <span class="mg-rt-mini">+ em linkedIn/renanzozimo</span>
+          </a>
+        </div>
       </article>
       <article class="col-xs-12">
         <h4 class="mg-bt-1">Feitos profissionais</h4>
@@ -89,20 +94,35 @@
                   <span class="mg-rt-1">Redesenho do PrimeBuilder Android aplicando os padrões do Material Design.</span>
                   <a class="text-nowrap line" ng-click="showDetails('xp-ux', 3)" ng-show="mezzanineContent !== 'xp-ux-3'">+ detalhes</a>
                 </li>
+                <li class="pd-1" ng-class="{'bg-color body-bg' : mezzanineContent === 'xp-ux-4'}">
+                  <span class="mg-rt-1">Definição do processo de entradas de demandas para o time de desenvolvimento, estabelecendo o time de UX como parte primordial em tarefas de inovação. Esse processo foi mantido durante todo o ano de 2017 e tudo indica que continuará ativo.</span>
+                  <a href="" class="text-nowrap" ng-show="mezzanineContent !== 'xp-ux-4'" disabled>
+                    <span class="color text-disabled-black">+ detalhes em breve</span>
+                  </a>
+                </li>
+                <li class="pd-1" ng-class="{'bg-color body-bg' : mezzanineContent === 'xp-ux-5'}">
+                  <span class="mg-rt-1">Trabalho de evangelização com palestras e dinâmicas com o objetivo de disseminar a cultura de UX. Com o tempo a receptividade de toda a empresa é notável.</span>
+                  <a href="" class="text-nowrap" ng-show="mezzanineContent !== 'xp-ux-5'" disabled>
+                    <span class="color text-disabled-black">+ detalhes em breve</span>
+                  </a>
+                </li>
               </ul>
-            </section>
-            <section class="card pd-1">
-              <h5 class="mg-bt-1">Usabilidade</h5>
-              <ul class="pd-lt-2">
-                <li class="mg-bt-1">Criação de conceito e implementação de componente chamado <b>mezzanine</b>, um componente que permite a visualização de detalhes de um objeto ainda permitindo fácil acesso e livre interação com o conteúdo da pagina (utilizado aqui para todos os "+ detalhes")</li>
-                <li class="mg-bt-1">Revisão de sistema legado corrigindo principais problemas dentro da possibilidade, aplicando principais conceitos de usabilidade + <b>Heurísticas de Nielsen</b></li>
-              </ul>
-              <div class="btn-group text-right mg-tp-mini">
-                <button class="btn type-flat color-accent">+ detalhes</button>
-              </div>
             </section>
           </div>
           <div class="col-xs-12 col-md-6">
+            <section class="card pd-1">
+              <h5 id="xp-usability" class="mg-bt-1">Usabilidade</h5>
+              <ul class="pd-lt-2">
+                <li class="pd-1" ng-class="{'bg-color body-bg' : mezzanineContent === 'xp-usability-1'}">
+                  <span class="mg-rt-1">Criação de conceito e implementação de componente chamado Mezzanine. Pelo botão "+ detalhes" é possível ver seu funcionamento nesse site;</span>
+                  <a class="text-nowrap line" ng-click="showDetails('xp-usability', 1)" ng-show="mezzanineContent !== 'xp-usability-1'">+ detalhes</a>
+                </li>
+                <li class="pd-1" ng-class="{'bg-color body-bg' : mezzanineContent === 'xp-usability-2'}">
+                  <span class="mg-rt-1">Revisão de usabilidade no sistema legado do PrimeBuilder, corrigindo os problemas mais graves e aplicando os principais conceitos da boa experiência (como as Heurísticas de Nielsen).</span>
+                  <a class="text-nowrap line" ng-click="showDetails('xp-usability', 2)" ng-show="mezzanineContent !== 'xp-usability-2'">+ detalhes</a>
+                </li>
+              </ul>
+            </section>
             <section class="card pd-1">
               <h5 id="xp-front" class="mg-bt-1">Front-end/CSS</h5>
               <ul class="pd-lt-2">
@@ -114,6 +134,15 @@
             </section>
           </div>
         </div>
+      </article>
+      <article class="col-xs-12 mg-bt-2">
+        <h4 class="mg-bt-1">Meus planos, objetivos e expectativas</h4>
+        <section>
+          <p class="mg-bt-1">No quadro de habilidades abaixo é possível entender melhor meus direcionamentos e o quanto espero ainda aprender e desenvolver de cada uma.</p>
+          <p class="mg-bt-1">Pretendo me tornar um desenvolvedor front-end competende pelas demandas que tenho enfrentado, mas meu foco e desejo no momento é estudar UX e buscar a oportunidade de atuar 100% como UX Designer.</p>
+          <p class="mg-bt-1">Desejo nesse ano de 2018 estar fluente em inglês (que estudo há um ano) e manter um blog que exponha meus conhecimentos de CSS para ajudar quem está começando.</p>
+          <p class="mg-bt-1">Gosto muito de programar, então é provável que meus estudos JS em casa continuem por um bom tempo :)</p>
+        </section>
       </article>
       <article class="col-xs-12 mg-bt-2">
         <h4 class="mg-bt-1">Habilidades</h4>
@@ -191,11 +220,16 @@
     </div>
   </main>
 
-  <footer>
-
+  <footer class="bg-color accent text-center" style="padding-top: 60px; padding-bottom: 60px; border-bottom: 30px solid rgba(0,0,0,0.2)">
+    <div class="container">
+      <h4 class="color text-secondary-white">E ae, curtiu? Que tal me dar um feedback?</h4>
+      <h3 class="mg-bt-2 color text-secondary-white">renanfz@gmail.com</h4>
+      <p class="mg-bt-2 color text-secondary-white">Este site estará em constante atualização, inclusive com melhorias de usabilidade. Por isso, qualquer feedback é valioso para que eu observe como fazer uma trabalho melhor.</p>
+      <h3 class="mg-bt-2 color text-secondary-white">Muito obrigado! :)</h3>
+    </div>
   </footer>
 
-  <div class="mezzanine full-height" ng-class="{'active' : mezzanineIsOpen}">
+  <aside class="mezzanine full-height" ng-class="{'active' : mezzanineIsOpen}">
     <div id="summary-1" class="structure bg-color white" ng-show="mezzanineContent == 'summary-1'">
       <div class="structure-header center">
         <div class="left">
@@ -333,7 +367,51 @@
         </div>
       </div>
     </div>
-  </div>
+    <div id="xp-usability-1" class="structure bg-color white" ng-show="mezzanineContent == 'xp-usability-1'">
+      <div class="structure-header center">
+        <div class="left">
+          <div class="texts">
+            <span class="title">Feitos Profissionais - Usabilidade</span>
+          </div>
+        </div>
+        <div class="right">
+          <button class="btn type-flat icon-24" ng-click="closeDetails('xp-usability')">
+            <i class="material-icons">close</i>
+          </button>
+        </div>
+      </div>
+      <div class="structure-body pd-tp-1 pd-bt-1">
+        <div class="ovweflow-limiter">
+          <h4 class="mg-bt-1">Criando nossa própria framework CSS</h4>
+          <p class="mg-bt-1">Percebemos a necessidade do usuário em contornar a seguinte situação: clica num objeto, interage com uma janela modal, fecha a janela modal, clica em outro objeto, interage com outra modal… Essa era uma situação constante num sistema com tantas entidades e relações como tínhamos no PrimeBuilder. </p>
+          <p class="mg-bt-1">Pensei, desenhei e implementei o componente chamado por nós de Mezzanine, que permite que o usuário interaja com os detalhes de um objeto sem que ele perca acesso ao restante do conteúdo da página, a menos, é claro, que seja esse o objetivo.</p>
+          <p class="mg-bt-1">Percebemos uma melhora considerável no fluxo de navegação em atividades simples dentro do sistema, como visualização de detalhes de uma tarefa ou edição de um item.</p>
+        </div>
+      </div>
+    </div>
+    <div id="xp-usability-2" class="structure bg-color white" ng-show="mezzanineContent == 'xp-usability-2'">
+      <div class="structure-header center">
+        <div class="left">
+          <div class="texts">
+            <span class="title">Feitos Profissionais - Usabilidade</span>
+          </div>
+        </div>
+        <div class="right">
+          <button class="btn type-flat icon-24" ng-click="closeDetails('xp-usability')">
+            <i class="material-icons">close</i>
+          </button>
+        </div>
+      </div>
+      <div class="structure-body pd-tp-1 pd-bt-1">
+        <div class="ovweflow-limiter">
+          <h4 class="mg-bt-1">Usabilidade no sistema legado do PrimeBuilder</h4>
+          <p class="mg-bt-1">Como todo produto consolidado, o PrimeBuilder possuía um sistema robusto, funcionando, mas com graves problemas de usabilidade. Por ter sido feito em outra época, algumas convenções já não atendiam a quantidade de features que o produto recebeu ao longo dos anos.</p>
+          <p class="mg-bt-1">Foi feito um trabalho de revisão tela a tela, repensando a estrutura dos códigos CSS, a usabilidade geral do sistema, arquitetura da informação, nomenclaturas e fluxos.</p>
+          <p class="mg-bt-1">Dentro das possibilidades, fizemos melhorias pontuais, mas significativas, e todo o trabalho de revisão que não pôde, por limitações técnicas, ser implementado, gerou a base de conhecimento do que viria a ser a nova versão do PrimeBuilder, na qual trabalhamos para evitar que todos os problemas enfrentados e engessados no legado não se repetissem.</p>
+        </div>
+      </div>
+    </div>
+  </aside>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.17/angular-filter.min.js"></script>
