@@ -4,8 +4,12 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Renan Zózimo</title>
+  <meta name="theme-color" content="#009688">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Renan Zózimo</title>
+
+  <link rel="icon" sizes="192x192" href="src/imgs/logo192.png">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="src/css/layout.css">
@@ -18,12 +22,12 @@
         <div class="row">
           <div class="col-xs-12" ng-controller="HeaderController">
             <div class="btn-group text-right">
-              <a class="btn type-flat color-white" target="_blank" href="http://www.linkedin.com/in/renanzozimo">
+              <a class="btn type-flat color-white" title="Acesse o LinkedIn de Renan Zózimo" target="_blank" href="http://www.linkedin.com/in/renanzozimo">
                 <span class="mg-rt-mini color text-secondary-white text-lowercase">linkedIn/renanzozimo</span>
-                <img src="src/imgs/linkedin.svg" alt="linkedin" style="width: 24px;">
+                <img src="src/imgs/linkedin.svg" title="linkedin" alt="linkedin-logo" style="width: 24px;">
               </a>
             </div>
-            <h1 class="display-2">{{name}}</h1>
+            <h1 class="display-2">Renan Zózimo</h1>
             <p class="color text-secondary-white mg-bt-1" style="transform: translateY(-10px)">{{description}}</p>
             <h4 class="color text-secondary-white">UX Designer and sometimes Front-end Developer</h4>
             <h4 class="mg-tp-2 mg-bt-1 text-right v-align-children">
@@ -70,7 +74,7 @@
           </div>
         </section>
         <div class="text-right">
-          <a class="btn inline-block type-flat color-accent" target="_blank" href="http://www.linkedin.com/in/renanzozimo">
+          <a class="btn inline-block type-flat color-accent" title="Acesse o LinkedIn de Renan Zózimo" target="_blank" href="http://www.linkedin.com/in/renanzozimo">
             <span class="mg-rt-mini">+ em linkedIn/renanzozimo</span>
           </a>
         </div>
@@ -273,8 +277,8 @@
           <h4 class="mg-bt-1">Google Design Sprint - Redesenho do App Prime Builder</h4>
           <p class="mg-bt-1">Tínhamos a missão de redesenhar as telas do aplicativo PrimeBuilder, carro-chefe da empresa. O intuito desse redesenho era garantir a fluidez nas tarefas executadas pelo usuário, melhorar a organização de informações e aproximar a experiência proporcionada pelo aplicativo à dos principais <i>apps</i> da Play Store e App Store.</p>
           <p class="mg-bt-1">Conduzi um modelo adaptado do Google Design Sprint por 3 dias contando com a ajuda de uma equipe multidisciplinar de 6 colaboradores: debatemos, esboçamos, divergimos e decidimos como seria a nova interface. Foram feitos protótipos no Axure, o que nos possibilitou realizar testes com alguns usuários.</p>
-          <img src="src/imgs/xp-ux-1-01.jpg" alt="Design Sprint - sala de reunião" class="col-xs-12 col-sm-6 pd-lt-0-force mg-bt-1" style="padding-right: 7.5px;" />
-          <img src="src/imgs/xp-ux-1-02.jpg" alt="Design Sprint - feedback positivo" class="col-xs-12 col-sm-6 pd-rt-0-force mg-bt-1" style="padding-left: 7.5px;" />
+          <img src="src/imgs/xp-ux-1-01.jpg" title="Design Sprint - sala de reunião" alt="Design Sprint - sala de reunião" class="col-xs-12 col-sm-6 pd-lt-0-force mg-bt-1" style="padding-right: 7.5px;" />
+          <img src="src/imgs/xp-ux-1-02.jpg" title="Design Sprint - feedback positivo sobre Renan Zózimo" alt="Design Sprint - feedback positivo sobre Renan Zózimo" class="col-xs-12 col-sm-6 pd-rt-0-force mg-bt-1" style="padding-left: 7.5px;" />
           <div class="text-center mg-bt-2">
             <a class="line" href="https://goo.gl/rPw2uB" target="_blank">
               veja algumas fotos aqui (Google Drive)
@@ -382,7 +386,7 @@
       </div>
       <div class="structure-body pd-tp-1 pd-bt-1">
         <div class="ovweflow-limiter">
-          <h4 class="mg-bt-1">Criando nossa própria framework CSS</h4>
+          <h4 class="mg-bt-1">Criação de componente visual: Mezzanine</h4>
           <p class="mg-bt-1">Percebemos a necessidade do usuário em contornar a seguinte situação: clica num objeto, interage com uma janela modal, fecha a janela modal, clica em outro objeto, interage com outra modal… Essa era uma situação constante num sistema com tantas entidades e relações como tínhamos no PrimeBuilder. </p>
           <p class="mg-bt-1">Pensei, desenhei e implementei o componente chamado por nós de Mezzanine, que permite que o usuário interaja com os detalhes de um objeto sem que ele perca acesso ao restante do conteúdo da página, a menos, é claro, que seja esse o objetivo.</p>
           <p class="mg-bt-1">Percebemos uma melhora considerável no fluxo de navegação em atividades simples dentro do sistema, como visualização de detalhes de uma tarefa ou edição de um item.</p>

@@ -1,0 +1,126 @@
+<svg version="1.1" x="0px" y="0px" viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+  <style type="text/css">
+    .st0 {
+      display: none;
+      opacity: 0.2;
+    }
+
+    .st1 {
+      display: inline;
+    }
+
+    .st2 {
+      fill: #231F20;
+    }
+
+    .st3 {
+      fill: #FF5A5A;
+    }
+
+    .st4 {
+      opacity: 0.3;
+      enable-background: new;
+    }
+
+    .st5 {
+      fill: #FFB655;
+    }
+
+    .st6 {
+      opacity: 0.2;
+    }
+
+    .st7 {
+      fill: #3E7F73;
+    }
+
+    .st8 {
+      fill: none;
+      stroke: #24FFFF;
+      stroke-width: 0.5;
+      stroke-miterlimit: 10;
+    }
+
+    .st9 {
+      display: none;
+    }
+
+    .st10 {
+      display: inline;
+      fill: none;
+      stroke: #27FFE5;
+      stroke-miterlimit: 10;
+    }
+  </style>
+  <g id="Camada_1_1_" class="st0">
+    <g class="st1">
+      <g>
+        <polygon class="st2" points="405,698.2 499,792.2 499.3,707.6 405,613.3 			" />
+        <polygon class="st2" points="405.5,697.8 405.5,612.9 546.4,472 588.9,514.4 			" />
+        <polygon class="st2" points="405.5,697.8 405.5,612.9 546.4,472 588.9,514.4 			" />
+        <polygon class="st2" points="408,584.8 502,678.8 502.3,594.3 408,500 			" />
+        <polygon class="st2" points="408.3,333.3 464.9,276.7 464.9,191.9 408.3,248.4 			" />
+        <polygon class="st2" points="408.3,333.3 464.9,276.7 464.9,191.9 408.3,248.4 			" />
+        <polygon class="st2" points="464.8,387.3 408.3,330.7 408.3,245.9 464.9,302.4 			" />
+        <polygon class="st2" points="407.3,133 591.9,317.6 591.9,402.4 407.2,217.8 			" />
+        <polygon class="st2" points="408,500 450.6,542.6 591.9,401.3 549.5,358.8 			" />
+        <polygon class="st2" points="408,500 408,584.8 591.9,401.3 549.5,358.8 			" />
+        <polygon class="st2" points="475.8,316.5 588.9,429.6 588.9,514.4 475.8,401.3 			" />
+      </g>
+      <g>
+        <polygon class="st3" points="405,698.2 499,792.2 499.3,707.6 405,613.3 			" />
+        <polygon class="st3" points="405.5,697.8 405.5,612.9 546.4,472 588.9,514.4 			" />
+        <polygon class="st4" points="405.5,697.8 405.5,612.9 546.4,472 588.9,514.4 			" />
+        <polygon class="st5" points="408,584.8 502,678.8 502.3,594.3 408,500 			" />
+        <polygon class="st5" points="408.3,333.3 464.9,276.7 464.9,191.9 408.3,248.4 			" />
+        <polygon class="st4" points="408.3,333.3 464.9,276.7 464.9,191.9 408.3,248.4 			" />
+        <polygon class="st5" points="464.8,387.3 408.3,330.7 408.3,245.9 464.9,302.4 			" />
+        <polygon class="st5" points="407.3,133 591.9,317.6 591.9,402.4 407.2,217.8 			" />
+        <polygon class="st5" points="408,500 450.6,542.6 591.9,401.3 549.5,358.8 			" />
+        <polygon class="st4" points="408,500 408,584.8 591.9,401.3 549.5,358.8 			" />
+        <polygon class="st3" points="475.8,316.5 588.9,429.6 588.9,514.4 475.8,401.3 			" />
+      </g>
+    </g>
+  </g>
+  <g id="Camada_2">
+    <g class="st6">
+      <ellipse class="st7" cx="500" cy="930" rx="100" ry="9.5" />
+    </g>
+    <g>
+      <polygon class="st5" points="460,372.6 460,300 400,360 400,460 460,400 		" />
+      <polygon class="st4" points="460,372.6 460,300 400,360 400,460 460,400 		" />
+    </g>
+    <polygon class="st3" points="400,640 400,740 520,860 520,760 	" />
+    <polygon class="st5" points="400,500 400,600 520,720 520,620 	" />
+    <g>
+      <polygon class="st5" points="600,300 400,500 400,600 600,400 		" />
+      <polygon class="st4" points="600,300 400,500 400,600 600,400 		" />
+    </g>
+    <g>
+      <polygon class="st3" points="600,440 400,640 400,740 600,540 		" />
+      <polygon class="st4" points="600,440 400,640 400,740 600,540 		" />
+    </g>
+    <polygon class="st5" points="400,100 600,300 600,400 400,200 	" />
+    <polygon class="st5" points="460,160 400,100 400,340 460,400 	" />
+    <polygon class="st3" points="480,320 480,420 600,540 600,440 	" />
+    <path class="st8" d="M897.6-258" />
+    <path class="st8" d="M897.6-157" />
+    <g class="st9">
+      <line class="st10" x1="-32.4" y1="-193" x2="897.6" y2="737" />
+      <line class="st10" x1="-32.4" y1="-92" x2="897.6" y2="838" />
+      <line class="st10" x1="-32.4" y1="-232" x2="897.6" y2="698" />
+      <line class="st10" x1="-32.4" y1="-332" x2="897.6" y2="598" />
+      <line class="st10" x1="-32.4" y1="68" x2="897.6" y2="998" />
+      <line class="st10" x1="-32.4" y1="168" x2="897.6" y2="1098" />
+      <line class="st10" x1="-32.4" y1="208" x2="897.6" y2="1138" />
+      <line class="st10" x1="-32.4" y1="308" x2="897.6" y2="1238" />
+      <line class="st10" x1="-32.4" y1="1174" x2="897.6" y2="244" />
+      <line class="st10" x1="-32.4" y1="1073" x2="897.6" y2="143" />
+      <line class="st10" x1="-32.4" y1="1033" x2="897.6" y2="103" />
+      <line class="st10" x1="-32.4" y1="933" x2="897.6" y2="3" />
+      <line class="st10" x1="-32.4" y1="893" x2="897.6" y2="-37" />
+      <line class="st10" x1="-32.4" y1="791" x2="897.6" y2="-139" />
+      <path class="st10" d="M-32.4,773" />
+    </g>
+  </g>
+</svg>
