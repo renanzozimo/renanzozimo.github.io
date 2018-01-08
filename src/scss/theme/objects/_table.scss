@@ -30,10 +30,13 @@ tr {
       background-color: $greyscalePB300
     }
   }
-  .table-card & {
+  .table-card &:not(.no-card) {
     @media (max-width: $screen-xssm-max + px) {
       background-color: #fff !important;
     }
+  }
+  .table-card &.no-card {
+    background-color: transparent !important;
   }
   &.active {
     background-color: $whitePB;
@@ -51,10 +54,7 @@ th {
 
 td {
   .table-card tbody & {
-    @media (max-width: $screen-xssm-max + px) {
-      &.pivot {
-        color: $defaultPB;
-      }
+    @media (max-width: $screen-sm-max + px) {
       &:not(.pivot)::before {
         color: $defaultPB;
       }

@@ -3,7 +3,7 @@
 // --------------------------------------------------
 table {
   &.table-card {
-    @media (max-width: $screen-xssm-max + px) {
+    @media (max-width: $screen-sm-max + px) {
       display: block;
       thead {
         display: none;
@@ -33,10 +33,14 @@ tr {
     @extend .shadow-1;
   }
   .table-card & {
-    @media (max-width: $screen-xssm-max + px) {
-      @include includeShadowOnElement(1);
+    @media (max-width: $screen-sm-max + px) {
       display: block;
       margin-bottom: $spacing-1;
+    }
+  }
+  .table-card &:not(.no-card) {
+    @media (max-width: $screen-sm-max + px) {
+      @include includeShadowOnElement(1);
       padding: $spacing-1 0 $spacingMini;
     }
   }
@@ -101,7 +105,7 @@ td {
     }
   }
   .table-card tbody & {
-    @media (max-width: $screen-xssm-max + px) {
+    @media (max-width: $screen-sm-max + px) {
       &:not(.pivot)[data-th]::before {
         content: attr(data-th);
         display: inline-block;
@@ -114,7 +118,7 @@ td {
     }
   }
   .table-card & {
-    @media (max-width: $screen-xssm-max + px) {
+    @media (max-width: $screen-sm-max + px) {
       display: block;
       padding: $spacingMini $spacing-1;
       max-width: unset !important;
@@ -148,7 +152,7 @@ td {
   td {
     white-space: nowrap;
   }
-  @media (max-width: $screen-xssm-max + px) {
+  @media (max-width: $screen-sm-max + px) {
     table.table-card {
       th,
       td {
@@ -167,7 +171,7 @@ td {
   &:not(.no-border) {
     border-width: 1px;
   }
-  @media (max-width: $screen-xssm-max + px) {
+  @media (max-width: $screen-sm-max + px) {
     &.table-card-parent {
       overflow: visible;
       border-width: 0;

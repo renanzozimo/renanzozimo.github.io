@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,13 +11,20 @@
   <link rel="stylesheet" href="src/css/layout.css">
   <link rel="stylesheet" href="src/css/theme.css">
 </head>
-<body>
-  <header class="container-fluid bg-color primary color text-primary-white pd-tp-2 pd-bt-2">
+<body ng-class="{'react-to-mezzanine' : mezzanineIsOpen}" ng-controller="MainController">
+  <header class="container-fluid bg-color primary color text-primary-white pd-tp-1 pd-bt-2">
     <div class="row">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12">
-            <h1 class="display-2">Renan Zózimo</h1>
+          <div class="col-xs-12" ng-controller="HeaderController">
+            <div class="btn-group text-right">
+              <a class="btn type-flat color-white" target="_blank" href="http://www.linkedin.com/in/renanzozimo">
+                <span class="caption mg-rt-mini color text-secondary-white text-lowercase">linkedIn/renanzozimo</span>
+                <img src="src/imgs/linkedin.svg" alt="linkedin" style="width: 24px;">
+              </a>
+            </div>
+            <h1 class="display-2">{{name}}</h1>
+            <h5 class="color text-secondary-white mg-bt-1">{{description}}</h5>
             <h4 class="color text-secondary-white">UX Designer and sometimes Front-end Developer</h4>
             <h4 class="mg-tp-2 mg-bt-1 text-right v-align-children">
               <i class="material-icons color text-secondary-white">place</i>
@@ -32,51 +39,12 @@
   <main class="container pd-tp-2">
     <h2 class="mg-bt-2">Perfil profissional</h2>
     <div class="row">
-      <article class="col-xs-12 mg-bt-2">
-        <h4 class="mg-bt-1">Habilidades</h4>
-        <table id="skills-table" class="table-card table-striped">
-          <thead>
-            <tr>
-              <th></th>
-              <th>Experiência</th>
-              <th>Nível atual</th>
-              <th>Expectativa</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="pivot" data-th="Habilidades">Design de interfaces</td>
-              <td data-th="Experiência">
-                <i class="material-icons sz-1">star</i>
-                <i class="material-icons sz-1">star</i>
-                <i class="material-icons sz-1">star</i>
-                <i class="material-icons sz-1 color text-disabled-black">star</i>
-                <i class="material-icons sz-1 color text-disabled-black">star</i>
-              </td>
-              <td data-th="Nível atual">
-                <i class="material-icons sz-1">star</i>
-                <i class="material-icons sz-1">star</i>
-                <i class="material-icons sz-1">star</i>
-                <i class="material-icons sz-1 color text-disabled-black">star</i>
-                <i class="material-icons sz-1 color text-disabled-black">star</i>
-              </td>
-              <td data-th="Expectativa">
-                <i class="material-icons sz-1">star</i>
-                <i class="material-icons sz-1">star</i>
-                <i class="material-icons sz-1">star</i>
-                <i class="material-icons sz-1 color text-disabled-black">star</i>
-                <i class="material-icons sz-1 color text-disabled-black">star</i>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </article>
-      <article class="col-xs-12 col-md-8 col-lg-6 mg-bt-2">
+      <article id="summary" class="col-xs-12 col-lg-6 mg-bt-2">
         <h4 class="mg-bt-1">Resumo</h4>
         <p>Trabalho há 4 anos com sistemas web e mobile, desenvolvendo soluções criativas e aprimorando interfaces.</p>
         <p class="mg-tp-1">Meu objetivo é oferecer interações garantindo a boa experiência do usuário nas tarefas do dia a dia.</p>
         <div class="btn-group mg-tp-1">
-          <button class="btn type-flat color-accent">+ sobre o que acredito</button>
+          <button class="btn type-flat color-accent no-active-feedback" ng-click="showDetails('summary', 1)" ng-disabled="mezzanineContent === 'summary-1'">+ sobre o que acredito</button>
         </div>
       </article>
       <article class="col-xs-12 col-md-8 col-lg-6 mg-bt-2">
@@ -101,27 +69,27 @@
             </div>
           </div>
         </section>
-        <div class="btn-group text-right">
-          <a href="http://www.linkedin.com/in/renanzozimo" class="" style="text-decoration: 1px solid">
-            <span class="mg-rt-mini">ir para linkedin</span>
-            <img src="src/imgs/linkedin.svg" alt="linkedin" style="width: 24px;">
-          </a>
-        </div>
       </article>
       <article class="col-xs-12">
         <h4 class="mg-bt-1">Feitos profissionais</h4>
         <div class="row">
           <div class="col-xs-12 col-md-6">
             <section class="card pd-1">
-              <h5 class="mg-bt-1">UX</h5>
+              <h5 id="xp-ux" class="mg-bt-1">UX</h5>
               <ul class="pd-lt-2">
-                <li class="mg-bt-1">[2017] Redesign de app com foco na experiência do usuário. Conduzi um modelo adaptado do <b>Google Design Sprint</b> por 3 dias contando com a ajuda de 6 colaboradores. Os feedbacks foram bem positivos, além de conseguirmos envolver uma pessoa que participou 100% remoto.</li>
-                <li class="mg-bt-1">[2017] Solução dentro do produto de uma tela com uma timeline onde é possível visualizar tarefas executadas. Foram feitas pesquisas de usuários e testes de usabilidade, além de todo um trabalho de prototipação utilizando Adobe XD</li>
-                <li class="mg-bt-1">Redesign de aplicativos inteiros aplicando padrões do Material Design para IOS e Android guardando suas particularidades</li>
+                <li class="pd-1" ng-class="{'bg-color body-bg' : mezzanineContent === 'xp-ux-1'}">
+                  <span class="mg-rt-1">Design Sprint com o objetivo de redesenhar interações e telas do aplicativo PrimeBuilder;</span>
+                  <a class="text-nowrap line" ng-click="showDetails('xp-ux', 1)" ng-show="mezzanineContent !== 'xp-ux-1'">+ detalhes</a>
+                </li>
+                <li class="pd-1" ng-class="{'bg-color body-bg' : mezzanineContent === 'xp-ux-2'}">
+                  <span class="mg-rt-1">Timeline de tarefas no PrimeBuilder para acompanhamento do trabalho realizado no dia;</span>
+                  <a class="text-nowrap line" ng-click="showDetails('xp-ux', 2)" ng-show="mezzanineContent !== 'xp-ux-2'">+ detalhes</a>
+                </li>
+                <li class="pd-1" ng-class="{'bg-color body-bg' : mezzanineContent === 'xp-ux-3'}">
+                  <span class="mg-rt-1">Redesenho do PrimeBuilder Android aplicando os padrões do Material Design.</span>
+                  <a class="text-nowrap line" ng-click="showDetails('xp-ux', 3)" ng-show="mezzanineContent !== 'xp-ux-3'">+ detalhes</a>
+                </li>
               </ul>
-              <div class="btn-group text-right mg-tp-mini">
-                <button class="btn type-flat color-accent">+ detalhes</button>
-              </div>
             </section>
             <section class="card pd-1">
               <h5 class="mg-bt-1">Usabilidade</h5>
@@ -136,26 +104,89 @@
           </div>
           <div class="col-xs-12 col-md-6">
             <section class="card pd-1">
-              <h5 class="mg-bt-1">Front-end - CSS</h5>
+              <h5 id="xp-front" class="mg-bt-1">Front-end/CSS</h5>
               <ul class="pd-lt-2">
-                <li class="mg-bt-1">Desenvolvimento de uma framework CSS completa focada nas necessidades específicas do projeto, reaproveitamento de código e manutenibilidade. Foi a primeira vez na empresa que o CSS foi escrito com foco na experiência do usuário. Esse trabalho está em constante melhoria.</li>
+                <li class="pd-1" ng-class="{'bg-color body-bg' : mezzanineContent === 'xp-front-1'}">
+                  <span class="mg-rt-1">Desenvolvimento de uma estrutura base CSS completa (como bootstrap.css), visando necessidades específicas do projeto, reaproveitamento de código e manutenibilidade.</span>
+                  <a class="text-nowrap line" ng-click="showDetails('xp-front', 1)" ng-show="mezzanineContent !== 'xp-front-1'">+ detalhes</a>
+                </li>
               </ul>
-              <div class="btn-group text-right mg-tp-mini">
-                <button class="btn type-flat color-accent">+ detalhes</button>
-              </div>
-            </section>
-            <section class="card pd-1">
-              <h5 class="mg-bt-1">Front-end - HTML</h5>
-              <ul class="pd-lt-2">
-                <li class="mg-bt-1">Criação de padrão para protótipos navegáveis</li>
-                <li class="mg-bt-1">Estudos de semântica + acessibilidade no projeto de um novo produto</li>
-              </ul>
-              <div class="btn-group text-right mg-tp-mini">
-                <button class="btn type-flat color-accent">+ detalhes</button>
-              </div>
             </section>
           </div>
         </div>
+      </article>
+      <article class="col-xs-12 mg-bt-2">
+        <h4 class="mg-bt-1">Habilidades</h4>
+        <table id="skills-table" class="table-card" ng-controller="SkillsController">
+          <thead>
+            <tr>
+              <th></th>
+              <th class="body-2 v-align-children text-nowrap cursor-pointer" ng-click="sortBy('xp')">
+                <span class="mg-rt-mini">Experiência</span>
+                <div class="color text-disabled-black mg-lt-15 clearfix" style="width: 38px;">
+                  <i class="material-icons pull-left color" ng-class="{'text-primary-black' : propertyName == 'xp' &amp;&amp; !reverse}">arrow_drop_up</i>
+                  <i class="material-icons pull-left color" ng-class="{'text-primary-black' : propertyName == 'xp' &amp;&amp; reverse}" style="margin-top: -10px;">arrow_drop_down</i>
+                </div>
+              </th>
+              <th class="body-2 v-align-children text-nowrap cursor-pointer" ng-click="sortBy('lvl')">
+                <span class="mg-rt-mini">Nível atual</span>
+                <div class="color text-disabled-black mg-lt-15 clearfix" style="width: 38px;">
+                  <i class="material-icons pull-left color" ng-class="{'text-primary-black' : propertyName == 'lvl' &amp;&amp; !reverse}">arrow_drop_up</i>
+                  <i class="material-icons pull-left color" ng-class="{'text-primary-black' : propertyName == 'lvl' &amp;&amp; reverse}" style="margin-top: -10px;">arrow_drop_down</i>
+                </div>
+              </th>
+              <th class="body-2 v-align-children text-nowrap cursor-pointer" ng-click="sortBy('expect')">
+                <span class="mg-rt-mini">Expectativa</span>
+                <div class="color text-disabled-black mg-lt-15 clearfix" style="width: 38px;">
+                  <i class="material-icons pull-left color" ng-class="{'text-primary-black' : propertyName == 'expect' &amp;&amp; !reverse}">arrow_drop_up</i>
+                  <i class="material-icons pull-left color" ng-class="{'text-primary-black' : propertyName == 'expect' &amp;&amp; reverse}" style="margin-top: -10px;">arrow_drop_down</i>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody ng-repeat="(key, value) in skills | groupBy: 'type'">
+            <tr class="no-card">
+              <td class="body-2 pd-0-force mg-tp-2 hidden-md-up" colspan="4">
+                <h5 class="body-2">{{key}}</h5>
+              </td>
+            </tr>
+            <tr class="no-card">
+                <td class="body-2 pd-tp-2-force hidden-sm-down-force" colspan="4">
+                  <h5 class="body-2">{{key}}</h5>
+                </td>
+              </tr>
+            <tr class="bg-color white" ng-repeat="skill in value | orderBy:propertyName:reverse">
+              <td class="pivot" data-th="Habilidades">{{skill.name}}</td>
+              <td class="color text-warning" data-th="Experiência">
+                <div class="clearfix inline-block">
+                  <i class="material-icons sz-1 pull-left"
+                    ng-repeat="i in stars | limitTo: (skill.xp)">star</i>
+                  <i class="material-icons sz-1 color text-disabled-black pull-left"
+                    ng-repeat="i in stars | limitTo: (stars.length - skill.xp)">star</i>
+                </div>
+              </td>
+              <td class="color text-warning" data-th="Nível atual">
+                <div class="clearfix inline-block">
+                  <i class="material-icons sz-1 pull-left"
+                      ng-repeat="i in stars | limitTo: (skill.lvl)">star</i>
+                  <i class="material-icons sz-1 pull-left color text-disabled-black"
+                      ng-repeat="i in stars | limitTo: (stars.length - skill.lvl)">star</i>
+                </div>
+              </td>
+              <td class="color text-warning" data-th="Expectativa">
+                <div class="clearfix inline-block">
+                  <i class="material-icons sz-1 pull-left"
+                    ng-repeat="i in stars | limitTo: (skill.expect)">star</i>
+                  <i class="material-icons sz-1 pull-left color text-disabled-black"
+                    ng-repeat="i in stars | limitTo: (stars.length - skill.expect)">star</i>
+                </div>
+              </td>
+            </tr>
+            <tr class="no-card" ng-if="key === 'UX'">
+              <td class="caption color text-secondary-black">* Não tenho ou tive Mac</td>
+            </tr>
+          </tbody>
+        </table>
       </article>
     </div>
   </main>
@@ -164,7 +195,149 @@
 
   </footer>
 
+  <div class="mezzanine full-height" ng-class="{'active' : mezzanineIsOpen}">
+    <div id="summary-1" class="structure bg-color white" ng-show="mezzanineContent == 'summary-1'">
+      <div class="structure-header center">
+        <div class="left">
+          <div class="texts">
+            <span class="title">Síntese do meu trabalho</span>
+          </div>
+        </div>
+        <div class="right">
+          <button class="btn type-flat icon-24" ng-click="closeDetails('summary')">
+            <i class="material-icons">close</i>
+          </button>
+        </div>
+      </div>
+      <div class="structure-body pd-tp-1">
+        <div class="overflow-limiter">
+          <p class="mg-bt-1">Trabalho hoje dividido entre Front-end e UX, atuando a maior parte do tempo como consultor de usabilidade para quaisquer interfaces Mobile ou Web em desenvolvimento.</p>
+          <p class="mg-bt-1">Pelo conhecimento que tenho, cabe a mim definir arquitetura e uso de HTML e CSS nos projetos. </p>
+          <p class="mg-bt-1">Trabalhando com CSS, utilizo Sass como pré-processador (apesar de conhecer LESS), organizo os arquivos CSS conforme a metodologia ITCSS e atualmente não sigo nenhum padrão de escrita como BEM, SMACSS ou OOCSS apesar de conhecê-los.</p>
+          <p class="mg-bt-1">Por conta dos estudos de JS que faço por conta própria, acabei desenvolvendo aptidão para programação front-end, o que me permitiu desempenhar esse papel de forma auxiliar.</p>
+          <p class="mg-bt-1">Leio e acompanho artigos sobre UX, atuo sempre que possível na empresa onde trabalho coordenando testes de usabilidade, redesigns e dinâmicas como Google Design Sprint, este último tendo 3 ocorrências em 2017.</p>
+          <h4 class="mg-bt-1">O que me move</h4>
+          <p class="mg-bt-1">Acredito na empatia como força motriz para o trabalho de UX e usabilidade. Tenho como objetivo sempre pensar na necessidade do usuário e entender a forma como ele enxerga o mundo e as soluções que proponho. Essa empatia, mesmo quando estou trabalhando com Front-end, norteia minhas decisões já que um código que precisa ser reutilizável deve ser compreensível, claro e coerente.</p>
+        </div>
+      </div>
+    </div>
+    <div id="xp-ux-1" class="structure bg-color white" ng-show="mezzanineContent == 'xp-ux-1'">
+      <div class="structure-header center">
+        <div class="left">
+          <div class="texts">
+            <span class="title">Feitos Profissionais - UX</span>
+          </div>
+        </div>
+        <div class="right">
+          <button class="btn type-flat icon-24" ng-click="closeDetails('xp-ux')">
+            <i class="material-icons">close</i>
+          </button>
+        </div>
+      </div>
+      <div class="structure-body pd-tp-1">
+        <div class="overflow-limiter">
+          <h4 class="mg-bt-1">Google Design Sprint - Redesenho do App Prime Builder</h4>
+          <p class="mg-bt-1">Tínhamos a missão de redesenhar as telas do aplicativo PrimeBuilder, carro-chefe da empresa. O intuito desse redesenho era garantir a fluidez nas tarefas executadas pelo usuário, melhorar a organização de informações e aproximar a experiência proporcionada pelo aplicativo à dos principais <i>apps</i> da Play Store e App Store.</p>
+          <p class="mg-bt-1">Conduzi um modelo adaptado do Google Design Sprint por 3 dias contando com a ajuda de uma equipe multidisciplinar de 6 colaboradores: debatemos, esboçamos, divergimos e decidimos como seria a nova interface. Foram feitos protótipos no Axure, o que nos possibilitou realizar testes com alguns usuários.</p>
+          <img src="src/imgs/xp-ux-1-01.jpg" alt="Design Sprint - sala de reunião" class="col-xs-12 col-sm-6 pd-lt-0-force mg-bt-1" style="padding-right: 7.5px;" />
+          <img src="src/imgs/xp-ux-1-02.jpg" alt="Design Sprint - feedback positivo" class="col-xs-12 col-sm-6 pd-rt-0-force mg-bt-1" style="padding-left: 7.5px;" />
+          <div class="text-center mg-bt-2">
+            <a class="line" href="https://goo.gl/rPw2uB" target="_blank">
+              veja algumas fotos aqui (Google Drive)
+            </a>
+          </div>
+          <p class="mg-bt-1">Os feedbacks foram positivos: pessoas que consideravam o Design Sprint uma perda de tempo se surpreenderam com a dinâmica. Também tivemos sucesso em envolver uma pessoa que participou remoto de todo o processo.</p>
+        </div>
+      </div>
+    </div>
+    <div id="xp-ux-2" class="structure bg-color white" ng-show="mezzanineContent == 'xp-ux-2'">
+      <div class="structure-header center">
+        <div class="left">
+          <div class="texts">
+            <span class="title">Feitos Profissionais - UX</span>
+          </div>
+        </div>
+        <div class="right">
+          <button class="btn type-flat icon-24" ng-click="closeDetails('xp-ux')">
+            <i class="material-icons">close</i>
+          </button>
+        </div>
+      </div>
+      <div class="structure-body pd-tp-1 pd-bt-1">
+        <div class="ovweflow-limiter">
+          <h4 class="mg-bt-1">Timeline de tarefas - PrimeBuilder</h4>
+          <p class="mg-bt-1">A necessidade do cliente era de visualizar a linha do tempo da execução de tarefas de seus colaboradores em campo.</p>
+          <p class="mg-bt-1">Fizemos pesquisa com os usuários, entendemos onde, quando e como os usuários precisariam dessa solução e desenhamos protótipos funcionais utilizando o Adobe XD.</p>
+          <p class="mg-bt-1">Depois de alguns testes de usabilidade, fizemos correções e implementamos com sucesso a <i>feature</i>.</p>
+          <div class="text-right mg-bt-2">
+            <a href="https://goo.gl/6gc9ZW" target="_blank">
+              PrimeBuilder na Google Play Store
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="xp-ux-3" class="structure bg-color white" ng-show="mezzanineContent == 'xp-ux-3'">
+      <div class="structure-header center">
+        <div class="left">
+          <div class="texts">
+            <span class="title">Feitos Profissionais - UX</span>
+          </div>
+        </div>
+        <div class="right">
+          <button class="btn type-flat icon-24" ng-click="closeDetails('xp-ux')">
+            <i class="material-icons">close</i>
+          </button>
+        </div>
+      </div>
+      <div class="structure-body pd-tp-1 pd-bt-1">
+        <div class="ovweflow-limiter">
+          <h4 class="mg-bt-1">Redesenho de App conforme Material Design Guide</h4>
+          <p class="mg-bt-1">Em 2016, juntamente com o time de desenvolvimento Android, conduzi o redesenho de todas as telas do aplicativo resguardando as definições visuais sugeridas pelo Google.</p>
+          <p class="mg-bt-1">Um trabalho tela a tela, durante 2 dias, discutindo a usabilidade e aplicação dos componentes, tendo como resultado uma revolução visual no aplicativo. Até hoje, na versão publicada atualmente, a base das interações segue o que definimos durante esse período.</p>
+          <p class="mg-bt-1">Depois disso, um segundo trabalho foi feito para adaptarmos as recomendações do Google ao contexto visual do IOS (nessa época, o Material Design ainda não tinha em seu guia uma parte dedicada a esse <i>port</i> como tem hoje).</p>
+          <div class="text-right mg-bt-2">
+            <a class="line" href="https://goo.gl/6gc9ZW" target="_blank">
+              PrimeBuilder na Google Play Store
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="xp-front-1" class="structure bg-color white" ng-show="mezzanineContent == 'xp-front-1'">
+      <div class="structure-header center">
+        <div class="left">
+          <div class="texts">
+            <span class="title">Feitos Profissionais - Front-end/CSS</span>
+          </div>
+        </div>
+        <div class="right">
+          <button class="btn type-flat icon-24" ng-click="closeDetails('xp-front')">
+            <i class="material-icons">close</i>
+          </button>
+        </div>
+      </div>
+      <div class="structure-body pd-tp-1 pd-bt-1">
+        <div class="ovweflow-limiter">
+          <h4 class="mg-bt-1">Criando nossa própria framework CSS</h4>
+          <p class="mg-bt-1">Durante alguns anos, foi uma prática recorrente na empresa customizar frameworks, talvez de uma maneira não ideal. Criava-se um arquivo anexo que funcionava junto, por exemplo, do bootstrap.css, assim tinhamos 2 arquivos gigantes, com diversas classes não usadas e muito <i>overwrite</i>.</p>
+          <p class="mg-bt-1">Eu já tinha estudos e conceitos de uma estrutura que sempre pensei em criar, e foi a oportunidade que tive de pegar um projeto pessoal e implementá-lo na prática.</p>
+          <p class="mg-bt-1">Sendo assim, propus que criássemos o nosso bootstrap, que serviria de base para todos os projetos dali em diante. Com o trabalho de UX e Design feito de forma prévia, essa estrutura nasceu para consolidar as interações e o visual para os novos produtos web.</p>
+          <p class="mg-bt-1">Até hoje essa é a base dos nossos produtos, a produção de páginas ficou extremamente ágil, a manutenção simples, e garantimos o projeto em constante evolução.</p>
+          <p class="mg-bt-1">Em paralelo, desenvolvo e aprimoro constantemente este padrão, sendo este site todo produzido utilizando a minha versão pessoal dessa estrutura, uma evolução daquela que lá atrás deu origem ao framework da empresa.</p>
+          <div class="text-right mg-bt-2">
+            <a class="line" href="http://new.primebuilder.com.br/#/docs" target="_blank">
+              Veja a documentação desse trabalho
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.17/angular-filter.min.js"></script>
+  <script src="src/js/scripts.js"></script>
 
 </body>
 </html>

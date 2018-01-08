@@ -112,6 +112,10 @@ $shadow in $shadowValues {
   justify-content: flex-start;
 }
 
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
 //CLASSES TO CONFIGURE MAX-WIDTH IN ELEMENTS NEXT TO .BTN.ICON-24
 [class*="reacts-"] {
   word-wrap: break-word;

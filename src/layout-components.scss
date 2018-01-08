@@ -1,0 +1,121 @@
+#skills-table td::before {
+  min-width: 100px;
+}
+
+li {
+  transition: background-color 375ms;
+}
+
+//Mezzanine
+@media (min-width: $screen-lg-min + px) {
+  body.react-to-mezzanine {
+    width: calc(100% - #{$mezzanine-lg-size});
+
+    .hidden-sm-down-force {
+      display: none !important;
+    }
+    .hidden-md-up {
+      display: block;
+    }
+    header,
+    main,
+    .container {
+      &,
+      [class^="col-"] {
+        width: 100%;
+      }
+    }
+    table.table-card {
+      display: block;
+      thead {
+        display: none;
+      }
+      tfoot {
+        display: block;
+        width: 100%;
+        word-wrap: break-word;
+      }
+      tbody {
+        display: block;
+        width: 100%;
+      }
+    }
+    .table-card tr {
+      display: block;
+      margin-bottom: $spacing-1;
+    }
+    .table-card tr:not(.no-card) {
+      @include includeShadowOnElement(1);
+      padding: $spacing-1 0 $spacingMini;
+    }
+    table.table-card td,
+    table.table-card th {
+      padding: $spacing-1;
+    }
+    .table-card tbody td:not(.pivot)[data-th]::before {
+      content: attr(data-th);
+      display: inline-block;
+      font-size: 0.85em;
+      font-weight: bold;
+      margin-right: $spacingMini;
+      text-transform: uppercase;
+      vertical-align: bottom;
+    }
+    .table-card td {
+      display: block;
+      padding: $spacingMini $spacing-1;
+      max-width: unset !important;
+      &:empty {
+        display: none;
+      }
+      &.pivot {
+        font-size: 1.42em;
+        padding-top: 0;
+        padding-bottom: 10px;
+      }
+      &.text-center,
+      &.text-right {
+        text-align: left;
+      }
+      button.btn.icon-24 {
+        height: 48px;
+        width: 48px;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-md-max + px) {
+  // & {
+  //   width: 100%;
+  //   height: 100% !important;
+  //   top: 0 !important;
+  // }
+}
+
+a.line {
+  &:not(.no-relative) {
+    position: relative
+  }
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -$spacingMini;
+    width: calc(100% + (#{$spacingMini} * 2));
+    border-bottom: 1px solid;
+    left: -$spacingMini;
+    height: 100%;
+  }
+  &::before {
+    opacity: 0.2;
+  }
+  &::after {
+    transform-origin: 50% 0;
+    transform: scaleX(0);
+    transition: transform 200ms;
+  }
+  &:hover::after {
+    transform: scale(1);
+  }
+}

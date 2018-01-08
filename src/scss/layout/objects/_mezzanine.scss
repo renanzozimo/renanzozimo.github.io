@@ -7,7 +7,7 @@
 .mezzanine {
   @extend .shadow-1;
   transform: translateX(110%);
-  transition: transform 375ms cubic-bezier(0.0, 0.0, 0.2, 1) 0s;
+  transition: transform 375ms cubic-bezier(0.0, 0.0, 0.2, 1) 0.1s;
   right: 0;
   z-index: $zindex-mezzanine;
   @extend .fixed;

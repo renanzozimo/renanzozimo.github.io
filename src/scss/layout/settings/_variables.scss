@@ -5,8 +5,8 @@
 $spacingMini: 5px !default;
 $spacing-1: 15px !default;
 $spacing-2: 30px !default;
-$radius: 5px !default;
-$radiusUnity: 5px !default;
+$radius: 0 !default;
+$radiusUnity: 0 !default;
 
 
 // - - - - - Z-INDEX CONTROL
@@ -77,7 +77,7 @@ $range-track-height : 2px !default;
 $range-track-border-width : 0 !default;
 
 // - - - - - MEZZANINE
-$mezzanine-lg-size : 400px;
+$mezzanine-lg-size : 400px !default;
 
 // - - - - - SNACKBAR
 $snackbar-max-width : 568px;

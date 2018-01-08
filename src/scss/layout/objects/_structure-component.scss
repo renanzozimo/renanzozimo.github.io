@@ -37,7 +37,7 @@
 .overflow-limiter {
   padding-right: $spacing-1;
   &:not(.mg-rt-1-negative):not([class*="mg-rt"]) {
-    margin-right: $spacing-2 * -1;
+    margin-right: $spacing-1 * -1;
   }
   &.mg-rt-1-negative {
     margin-right: $spacing-1 * -1;
