@@ -256,7 +256,7 @@ i+.icon-badge {
 @include simple-trumps( '.pull-right', 'float', 'right');
 @include simple-trumps( '.pull-left', 'float', 'left');
 @include simple-trumps( '.pull-reset', 'float', 'none');
-@include simple-trumps( '.text-center', 'text-align', 'center');
+@include responsive-trumps( '.text-center', 'text-align', 'center');
 @include simple-trumps( '.text-left', 'text-align', 'left');
 @include simple-trumps( '.text-right', 'text-align', 'right');
 @include simple-trumps( '.text-justify', 'text-align', 'justify');
@@ -288,7 +288,7 @@ i+.icon-badge {
 @include simple-trumps( '.mg-rt-2', 'margin-right', $spacing-2);
 @include simple-trumps( '.mg-bt-0', 'margin-bottom', 0);
 @include simple-trumps( '.mg-bt-mini', 'margin-bottom', $spacingMini);
-@include simple-trumps( '.mg-bt-1', 'margin-bottom', $spacing-1);
+@include responsive-trumps( '.mg-bt-1', 'margin-bottom', $spacing-1);
 @include simple-trumps( '.mg-bt-2', 'margin-bottom', $spacing-2);
 @include simple-trumps( '.mg-lt-0', 'margin-left', 0);
 @include simple-trumps( '.mg-lt-mini', 'margin-left', $spacingMini);

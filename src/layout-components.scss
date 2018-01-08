@@ -119,3 +119,13 @@ a.line {
     transform: scale(1);
   }
 }
+
+.flex-start- {
+  @media (min-width: $screen-sm-min + px) {
+    display: flex;
+    justify-content: flex-start;
+    &.center {
+      align-items: center;
+    }
+  }
+}

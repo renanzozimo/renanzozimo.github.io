@@ -21,8 +21,8 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-12" ng-controller="HeaderController">
-            <div class="btn-group text-right">
-              <a class="btn type-flat color-  white" title="Acesse o LinkedIn de Renan Zózimo" target="_blank" href="http://www.linkedin.com/in/renanzozimo">
+            <div class="btn-group text-right text-center-xssm -down-force mg-bt-1">
+              <a class="btn type-flat color-white" title="Acesse o LinkedIn de Renan Zózimo" target="_blank" href="http://www.linkedin.com/in/renanzozimo">
                 <span class="mg-rt-mini color text-secondary-white text-lowercase">linkedIn/renanzozimo</span>
                 <img src="src/imgs/linkedin.svg" title="linkedin" alt="linkedin-logo" style="width: 24px;">
               </a>
@@ -32,10 +32,15 @@
                 <img src="src/imgs/github.svg" title="github" alt="github-logo" style="width: 24px;">
               </a>
             </div>
-            <h1 class="display-2" style="line-height: 1">Renan Zózimo</h1>
-            <p class="color text-secondary-white mg-bt-1">{{description}}</p>
-            <h4 class="color text-secondary-white">UX Designer and sometimes Front-end Developer</h4>
-            <h4 class="mg-tp-2 mg-bt-1 text-right v-align-children">
+            <div class="flex-start- text-center-xssm-down center">
+              <img class="fully-rounded flex-shrink-0 mg-rt-1 mg-bt-1-xssm-down" src="src/imgs/renan-zozimo.jpg" alt="Renan Zozimo foto" title="Renan Zozimo" style="width: 150px; max-width: 40%;">
+              <div>
+                <h1 class="display-2" style="line-height: 1; transform: translateX(-3px)">Renan Zózimo</h1>
+                <p class="color text-secondary-white mg-bt-1">{{description}}</p>
+                <h4 class="color text-secondary-white">UX Designer and sometimes Front-end Developer</h4>
+              </div>
+            </div>
+            <h4 class="mg-tp-2 mg-bt-1 text-right text-center-xssm-down-force v-align-children">
               <i class="material-icons color text-secondary-white">place</i>
               <span>BH, Minas Gerais</span>
             </h4>
@@ -312,9 +317,12 @@
           <p class="mg-bt-1">A necessidade do cliente era de visualizar a linha do tempo da execução de tarefas de seus colaboradores em campo.</p>
           <p class="mg-bt-1">Fizemos pesquisa com os usuários, entendemos onde, quando e como os usuários precisariam dessa solução e desenhamos protótipos funcionais utilizando o Adobe XD.</p>
           <p class="mg-bt-1">Depois de alguns testes de usabilidade, fizemos correções e implementamos com sucesso a <i>feature</i>.</p>
-          <div class="text-right mg-bt-2">
-            <a href="https://goo.gl/6gc9ZW" target="_blank">
+          <div class="text-right v-align children mg-bt-2">
+            <a class="mg-rt-1 line" href="https://goo.gl/6gc9ZW" target="_blank">
               PrimeBuilder na Google Play Store
+            </a>
+            <a class="line" href="https://goo.gl/kYrZpV" target="_blank">
+              Protótipo Adobe XD (v1)
             </a>
           </div>
         </div>
