@@ -1,5 +1,5 @@
 @import "scss/theme/mixins/material-colors"; //mixin with all colors
-@include themeColor(teal, blue, orange); //mixin to get material design colors
+@include themeColor(teal, indigo, orange); //mixin to get material design colors
 
 //CUSTOM COLOR VARARIABLES
 //extract variables only from 'theme/settings/_variables.scss'

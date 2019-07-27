@@ -40,7 +40,7 @@
               <div>
                 <h1 class="display-2" style="line-height: 1; transform: translateX(-3px)">Renan Zózimo</h1>
                 <p class="color text-secondary-white mg-bt-1">{{description}}</p>
-                <h4 class="color text-secondary-white">UX Designer and sometimes Front-end Developer</h4>
+                <h4 class="color text-secondary-white">UX Designer - <small>sometimes front-end explorer :)</small></h4>
               </div>
             </div>
             <h4 class="mg-tp-2 mg-bt-1 text-right text-center-xssm-down-force v-align-children">
@@ -58,7 +58,7 @@
     <div class="row">
       <article id="summary" class="col-xs-12 col-lg-6 mg-bt-2">
         <h4 class="mg-bt-1">Resumo</h4>
-        <p>Trabalho há 4 anos com sistemas web e mobile, desenvolvendo soluções criativas e aprimorando interfaces.</p>
+        <p>Trabalho há {{xpTime}} anos com sistemas web e mobile e a {{xpTimeUx}} anos com UX (User Experience), desenvolvendo soluções criativas com foco em usabilidade.</p>
         <p class="mg-tp-1">Meu objetivo é oferecer interações garantindo a boa experiência do usuário nas tarefas do dia a dia.</p>
         <div class="btn-group mg-tp-1">
           <button class="btn type-flat color-accent no-active-feedback" ng-click="showDetails('summary', 1)" ng-disabled="mezzanineContent === 'summary-1'">+ sobre o que acredito</button>
@@ -67,20 +67,20 @@
       <article class="col-xs-12 col-md-8 col-lg-6 mg-bt-2">
         <h4 class="mg-bt-1">Experiências profissionais</h4>
         <section class="card flex-start top pd-1">
+          <h6 style="width: 100px; flex-shrink: 0; transform: translateY(2px)">2018 até hoje</h6>
+          <div class="full-width">
+            <p class="subheading">Solutions One</p>
+            <p><small>UX Designer & Product Designer</small></p>
+            <!-- <div class="btn-group text-right mg-tp-mini">
+                      <button class="btn type-flat color-accent">+ detalhes</button>
+                    </div> -->
+          </div>
+        </section>
+        <section class="card flex-start top pd-1">
           <h6 style="width: 100px; flex-shrink: 0; transform: translateY(2px)">2013 a 2018</h6>
           <div class="full-width">
             <p class="subheading">Prime Systems</p>
             <p><small>UX Designer + Front end developer</small></p>
-            <!-- <div class="btn-group text-right mg-tp-mini">
-              <button class="btn type-flat color-accent">+ detalhes</button>
-            </div> -->
-          </div>
-        </section>
-        <section class="card flex-start top pd-1">
-          <h6 style="width: 100px; flex-shrink: 0; transform: translateY(2px)">2011 a 2013</h6>
-          <div class="full-width">
-            <p class="subheading">Portal UAI</p>
-            <p><small>Aux. Produção de Internet</small></p>
             <!-- <div class="btn-group text-right mg-tp-mini">
               <button class="btn type-flat color-accent">+ detalhes</button>
             </div> -->
@@ -94,6 +94,24 @@
       </article>
       <article class="col-xs-12">
         <h4 class="mg-bt-1">Feitos profissionais</h4>
+        <div class="row">
+          <div class="col-xs-12">
+            <section class="card pd-1">
+              <h5 id="xp-currently" class="mg-bt-1">Atualmente </h5>
+              <li class="pd-1" ng-class="{'bg-color body-bg' : mezzanineContent === 'xp-currently-1'}">
+                <span class="mg-rt-1">Protótipos de média fidelidade utilizando VueJS + Html/CSS/JS. Todo protótipo é construído de acordo com o design guide estabelecido pelo time de front-end: Material Design + Vue Material.</span>
+                <a class="text-nowrap line" ng-click="showDetails('xp-currently', 1)" ng-show="mezzanineContent !== 'xp-currently-1'">+ detalhes</a>
+              </li>
+              <li class="pd-1" ng-class="{'bg-color body-bg' : mezzanineContent === 'xp-currently-1'}">
+                <span class="mg-rt-1">Protótipos de baixa e alta fidelidade visual utilizando Adobe XD e Invision Studio. Processo de validação de ideias com a área de negócio foi melhorado consideravelmente, reduzindo ruídos na comunicação entre o planejamento e a execução.</span>
+              </li>
+              <li class="pd-1">
+                <span class="mg-rt-1">Criação e manutenção de biblioteca de componentes para prototipação no Adobe XD.</span>
+                <a class="text-nowrap line" target="_blank" href="https://xd.adobe.com/view/945ad521-8c4c-4688-4d10-02f1263057c4-e26b/?fullscreen">ver modelo</a>
+              </li>
+            </section>
+          </div>
+        </div>
         <div class="row">
           <div class="col-xs-12 col-md-6">
             <section class="card pd-1">
@@ -268,13 +286,48 @@
       </div>
       <div class="structure-body pd-tp-1">
         <div class="overflow-limiter">
-          <p class="mg-bt-1">Trabalho hoje dividido entre Front-end e UX, atuando a maior parte do tempo como consultor de usabilidade para quaisquer interfaces Mobile ou Web em desenvolvimento.</p>
-          <p class="mg-bt-1">Pelo conhecimento que tenho, cabe a mim definir arquitetura e uso de HTML e CSS nos projetos. </p>
-          <p class="mg-bt-1">Trabalhando com CSS, utilizo Sass como pré-processador (apesar de conhecer LESS), organizo os arquivos CSS conforme a metodologia ITCSS e atualmente não sigo nenhum padrão de escrita como BEM, SMACSS ou OOCSS apesar de conhecê-los.</p>
-          <p class="mg-bt-1">Por conta dos estudos de JS que faço por conta própria, acabei desenvolvendo aptidão para programação front-end, o que me permitiu desempenhar esse papel de forma auxiliar.</p>
-          <p class="mg-bt-1">Leio e acompanho artigos sobre UX, atuo sempre que possível na empresa onde trabalho coordenando testes de usabilidade, redesigns e dinâmicas como Google Design Sprint, este último tendo 3 ocorrências em 2017.</p>
+          <p class="mg-bt-1">Trabalho hoje como referência em usabilidade e experiência do usuário na <a target="_blank" href="https://site.solutionsone.com.br/">Solutions One.</a></p>
+          <p class="mg-bt-1">Atuo em conjunto com o Product Owner e a equipe de desenvolvimento, interagindo constantemente com as áreas de negócio para
+          descobrir problemas, encontrar possíveis soluções, validar hipóteses e sugerir soluções precisamente adequadas aos objetivos da plataforma.</p>
+          <p class="mg-bt-2">Esse processo trata de blindar a implementação das soluções, minimizando as surpresas durante a etapa de desenvolvimento e antecipando os problemas de usabilidade, interação e experiência do usuário .</p>
           <h4 class="mg-bt-1">O que me move</h4>
-          <p class="mg-bt-1">Acredito na empatia como força motriz para o trabalho de UX e usabilidade. Tenho como objetivo sempre pensar na necessidade do usuário e entender a forma como ele enxerga o mundo e as soluções que proponho. Essa empatia, mesmo quando estou trabalhando com Front-end, norteia minhas decisões já que um código que precisa ser reutilizável deve ser compreensível, claro e coerente.</p>
+          <p class="mg-bt-1">Acredito na empatia como força motriz para o trabalho de UX e usabilidade. Tenho como objetivo sempre pensar na necessidade do usuário e entender a forma como ele enxerga o mundo ao seu redor e como posso contribuir para um dia a dia mais simples e prático.</p>
+        </div>
+      </div>
+    </div>
+    <div id="xp-currently-1" class="structure bg-color white" ng-show="mezzanineContent == 'xp-currently-1'">
+      <div class="structure-header center">
+        <div class="left">
+          <div class="texts">
+            <span class="title">Feitos Profissionais - Atualmente</span>
+          </div>
+        </div>
+        <div class="right">
+          <button class="btn type-flat icon-24" ng-click="closeDetails('xp-currently')">
+            <i class="material-icons">close</i>
+          </button>
+        </div>
+      </div>
+      <div class="structure-body pd-tp-1">
+        <div class="overflow-limiter">
+          <h4 class="mg-bt-1">Prototipação</h4>
+          <p class="mg-bt-1">Na Solutions One, sempre validamos e testamos nossas ideias :)</p>
+          <p class="mg-bt-1">Aqui estão algumas delas, cerca de 1/5 (o que posso mostrar), mas dá uma ideia ao tipo de protótipos que usamos para validar ideias e fazer testes com usuários.</p>
+          <p class="mg-bt-1">
+            <a class="line" target="_blank" href="https://proto-rh.netlify.com/">Importação e criação de usuários - https://proto-rh.netlify.com/</a>
+          </p>
+          <p class="mg-bt-1">
+            <a class="line" target="_blank" href="https://proto-s1api-v2.netlify.com/">Cadastro de ApiClients - https://proto-s1api-v2.netlify.com/</a>
+          </p>
+          <p class="mg-bt-1">
+            <a class="line" target="_blank" href="https://proto-s1api-v2.netlify.com/">Cadastro de ApiClients - https://proto-s1api-v2.netlify.com/</a>
+          </p>
+          <p class="mg-bt-2">
+            <a class="line" target="_blank" href="https://proto-h-payment.netlify.com/">Validação de hipóteses para criação de produto - https://proto-h-payment.netlify.com/</a>
+          </p>
+          <p class="mg-bt-1">Mudanças sempre serão bem-vindas mesmo após a implementação final, é um processo de crescimento e
+            melhoria continuo, então nosso objetivo aqui é validar de forma pontual alguns conceitos e interações específicas, bem
+            como entender como o usuário está reagindo às mudanças.</p>
         </div>
       </div>
     </div>
