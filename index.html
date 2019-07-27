@@ -58,7 +58,7 @@
     <div class="row">
       <article id="summary" class="col-xs-12 col-lg-6 mg-bt-2">
         <h4 class="mg-bt-1">Resumo</h4>
-        <p>Trabalho há {{xpTime}} anos com sistemas web e mobile e a {{xpTimeUx}} anos com UX (User Experience), desenvolvendo soluções criativas com foco em usabilidade.</p>
+        <p>Trabalho há {{xpTime}} anos com sistemas web e mobile e há {{xpTimeUx}} anos com UX (User Experience), desenvolvendo soluções criativas com foco em usabilidade.</p>
         <p class="mg-tp-1">Meu objetivo é oferecer interações garantindo a boa experiência do usuário nas tarefas do dia a dia.</p>
         <div class="btn-group mg-tp-1">
           <button class="btn type-flat color-accent no-active-feedback" ng-click="showDetails('summary', 1)" ng-disabled="mezzanineContent === 'summary-1'">+ sobre o que acredito</button>
@@ -97,17 +97,26 @@
         <div class="row">
           <div class="col-xs-12">
             <section class="card pd-1">
-              <h5 id="xp-currently" class="mg-bt-1">Atualmente </h5>
+              <h5 id="xp-currently" class="mg-bt-1">Atualmente - Solutions One </h5>
               <li class="pd-1" ng-class="{'bg-color body-bg' : mezzanineContent === 'xp-currently-1'}">
                 <span class="mg-rt-1">Protótipos de média fidelidade utilizando VueJS + Html/CSS/JS. Todo protótipo é construído de acordo com o design guide estabelecido pelo time de front-end: Material Design + Vue Material.</span>
                 <a class="text-nowrap line" ng-click="showDetails('xp-currently', 1)" ng-show="mezzanineContent !== 'xp-currently-1'">+ detalhes</a>
               </li>
               <li class="pd-1" ng-class="{'bg-color body-bg' : mezzanineContent === 'xp-currently-1'}">
-                <span class="mg-rt-1">Protótipos de baixa e alta fidelidade visual utilizando Adobe XD e Invision Studio. Processo de validação de ideias com a área de negócio foi melhorado consideravelmente, reduzindo ruídos na comunicação entre o planejamento e a execução.</span>
+                <span class="mg-rt-1">Inúmeros protótipos de baixa e alta fidelidade visual utilizando Adobe XD e Invision Studio. Processo de validação de ideias com a área de negócio foi melhorado consideravelmente, reduzindo ruídos na comunicação entre o planejamento e a execução.</span>
+              </li>
+              <li class="pd-1" ng-class="{'bg-color body-bg' : mezzanineContent === 'xp-currently-1'}">
+                <span class="mg-rt-1">Condução de análises de jornada do usuário para todas as novas features, visando a precisão dos testes dos protótipos.</span>
               </li>
               <li class="pd-1">
                 <span class="mg-rt-1">Criação e manutenção de biblioteca de componentes para prototipação no Adobe XD.</span>
                 <a class="text-nowrap line" target="_blank" href="https://xd.adobe.com/view/945ad521-8c4c-4688-4d10-02f1263057c4-e26b/?fullscreen">ver modelo</a>
+              </li>
+              <li class="pd-1">
+                <span class="mg-rt-1">Criação de "anexo" visual auxiliar ao Vue Material, solicitado pelo time competente da empresa, com o objetivo de contornar alguns problemas corriqueiros no desenvolvimento das telas e adicionando pequenas soluções que favorecem
+                nossos sistemas.</span>
+                <a class="text-nowrap line" target="_blank"
+                  href="https://s1vm.netlify.com/">ver S1VM</a>
               </li>
             </section>
           </div>
@@ -115,7 +124,7 @@
         <div class="row">
           <div class="col-xs-12 col-md-6">
             <section class="card pd-1">
-              <h5 id="xp-ux" class="mg-bt-1">UX</h5>
+              <h5 id="xp-ux" class="mg-bt-1">UX - Prime Systems</h5>
               <ul class="pd-lt-2">
                 <li class="pd-1" ng-class="{'bg-color body-bg' : mezzanineContent === 'xp-ux-1'}">
                   <span class="mg-rt-1">Design Sprint com o objetivo de redesenhar interações e telas do aplicativo PrimeBuilder;</span>
@@ -134,7 +143,7 @@
           </div>
           <div class="col-xs-12 col-md-6">
             <section class="card pd-1">
-              <h5 id="xp-usability" class="mg-bt-1">Usabilidade</h5>
+              <h5 id="xp-usability" class="mg-bt-1">Usabilidade - Prime Systems</h5>
               <ul class="pd-lt-2">
                 <li class="pd-1" ng-class="{'bg-color body-bg' : mezzanineContent === 'xp-usability-1'}">
                   <span class="mg-rt-1">Criação de conceito e implementação de componente chamado Mezzanine. Pelo botão "+ detalhes" é possível ver seu funcionamento nesse site;</span>
@@ -147,11 +156,15 @@
               </ul>
             </section>
             <section class="card pd-1">
-              <h5 id="xp-front" class="mg-bt-1">Front-end/CSS</h5>
+              <h5 id="xp-front" class="mg-bt-1">Front-end/CSS - Prime Systems</h5>
               <ul class="pd-lt-2">
                 <li class="pd-1" ng-class="{'bg-color body-bg' : mezzanineContent === 'xp-front-1'}">
                   <span class="mg-rt-1">Desenvolvimento de uma estrutura base CSS completa (como bootstrap.css), visando necessidades específicas do projeto, reaproveitamento de código e manutenibilidade.</span>
                   <a class="text-nowrap line" ng-click="showDetails('xp-front', 1)" ng-show="mezzanineContent !== 'xp-front-1'">+ detalhes</a>
+                </li>
+                <li class="pd-1" ng-class="{'bg-color body-bg' : mezzanineContent === 'xp-front-1'}">
+                  <span class="mg-rt-1">Desenvolvimento front-end utilizando React + Redux entre dez/2017 e jun/2018 no produto de roteirização da Prime Systems (ainda sem link público).</span>
+                  <a class="text-nowrap line" target="_blank" href="https://www.youtube.com/watch?v=TivVVJkTj6I">vídeo no youtube</a>
                 </li>
               </ul>
             </section>
