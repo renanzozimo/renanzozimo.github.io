@@ -61,7 +61,6 @@ myApp.controller("MainController", [
       let footerHeight = document.querySelector("footer").offsetHeight;
       let bodyHeight = document.body.offsetHeight;
       let windowMax = bodyHeight - window.innerHeight;
-      console.log(window.scrollY, bodyHeight - footerHeight - 120);
 
       if (
         theadPosition < 0 &&
@@ -337,7 +336,7 @@ myApp.controller("SkillsController", [
         type: "+ Bônus"
       },
       {
-        name: "Trocadilhos infâmes",
+        name: "Trocadilhos infames",
         lvl: 4,
         expect: 5,
         xp: 5,
