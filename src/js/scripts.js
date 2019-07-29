@@ -142,9 +142,9 @@ myApp.controller("SkillsController", [
       },
       {
         name: "Apps Android e IOS",
-        lvl: 4,
+        lvl: 3,
         expect: 5,
-        xp: 5,
+        xp: 4,
         type: "Design"
       },
       {
@@ -170,9 +170,9 @@ myApp.controller("SkillsController", [
       },
       {
         name: "HTML",
-        lvl: 4,
+        lvl: 3,
         expect: 5,
-        xp: 5,
+        xp: 4,
         type: "Front"
       },
       {
@@ -183,14 +183,21 @@ myApp.controller("SkillsController", [
         type: "Front"
       },
       {
-        name: "AngularJS",
-        lvl: 3,
+        name: "React",
+        lvl: 2,
         expect: 4,
-        xp: 4,
+        xp: 2,
         type: "Front"
       },
       {
-        name: "ReactJS",
+        name: "Angular",
+        lvl: 1,
+        expect: 3,
+        xp: 1,
+        type: "Front"
+      },
+      {
+        name: "Vue",
         lvl: 2,
         expect: 4,
         xp: 3,
@@ -213,7 +220,7 @@ myApp.controller("SkillsController", [
       {
         name: "Protótipos HTML/CSS/JS interativos",
         lvl: 4,
-        expect: 5,
+        expect: 4,
         xp: 5,
         type: "UX"
       },
@@ -226,16 +233,16 @@ myApp.controller("SkillsController", [
       },
       {
         name: "Axure",
-        lvl: 3,
-        expect: 5,
-        xp: 3,
+        lvl: 2,
+        expect: 4,
+        xp: 2,
         type: "UX"
       },
       {
         name: "Adobe XD",
         lvl: 4,
         expect: 5,
-        xp: 3,
+        xp: 4,
         type: "UX"
       },
       {
@@ -254,9 +261,9 @@ myApp.controller("SkillsController", [
       },
       {
         name: "Photoshop",
-        lvl: 3,
-        expect: 4,
-        xp: 5,
+        lvl: 2,
+        expect: 3,
+        xp: 3,
         type: "Softwares p/ Criação"
       },
       {
@@ -277,7 +284,7 @@ myApp.controller("SkillsController", [
         name: "Git",
         lvl: 3,
         expect: 5,
-        xp: 5,
+        xp: 3,
         type: "Processos"
       },
       {
@@ -302,10 +309,10 @@ myApp.controller("SkillsController", [
         type: "Outros"
       },
       {
-        name: "FIFA 13 - 18",
+        name: "FIFA 13 - 19",
         lvl: 5,
-        expect: 3,
-        xp: 4,
+        expect: 1,
+        xp: 5,
         type: "+ Bônus"
       },
       {
@@ -324,9 +331,9 @@ myApp.controller("SkillsController", [
       },
       {
         name: "Trocadilhos infâmes",
-        lvl: 3,
+        lvl: 4,
         expect: 5,
-        xp: 4,
+        xp: 5,
         type: "+ Bônus"
       }
     ];
