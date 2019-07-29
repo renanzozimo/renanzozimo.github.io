@@ -56,10 +56,17 @@ myApp.controller("MainController", [
     setHeightTo(placeholder);
     setHeightTo(th);
 
-    window.onscroll = function() {
+    document.body.onscroll = function() {
       let theadPosition = thead.getBoundingClientRect().top;
+      let footerHeight = document.querySelector("footer").offsetHeight;
+      let bodyHeight = document.body.offsetHeight;
+      let windowMax = bodyHeight - window.innerHeight;
+      console.log(window.scrollY, bodyHeight - footerHeight - 120);
 
-      if (theadPosition < 0) {
+      if (
+        theadPosition < 0 &&
+        window.scrollY < bodyHeight - footerHeight - 120
+      ) {
         $scope.showPlaceholder = true;
         $scope.fixedClassTh = true;
       } else {
