@@ -187,12 +187,15 @@
         <div class="row">
           <div class="col-xs-12">
             <section class="card pd-1 flex-start">
-              <img class="pd-rt-1 hidden-md-down" src="./src/imgs/codinames.png" style="width: 33%; border-radius: 2px;" alt="">
+              <div class="col-xs-4 pd-0 pd-rt-1 hidden-md-down flex-shrink-0 ">
+
+                <img class="full-width" src="./src/imgs/codinames.png" style="border-radius: 2px;" alt="">
+              </div>
               <div>
 
                 <h5 id="xp-currently" class="mg-bt-1">Código secreto - Board Game</h5>
                 <p>
-                Versão digital dos componentes do jogo para facilitar as jogatinas na minha casa, assim podemos usar nos smartphones ou na TV. 
+                Versão digital 100% responsiva dos componentes do jogo para facilitar as jogatinas na minha casa, assim podemos usar nos smartphones ou na TV. 
               </p>
               <p class="mg-tp-1">
                 O jogo é
@@ -210,8 +213,11 @@
                   >Galápagos Jogos</a
                 >.
               </p>
-              <p class="mg-tp-1 pd-bt-1">
+              <p class="mg-tp-1">
                 Fiz nesse caso tanto as cartas da mesa (com os codinomes) quanto a chave (gerada randomicamente) que os comandantes usam para passar as dicas.
+              </p>
+              <p class="mg-tp-1 pd-bt-1">
+                <b>Um ponto importante desse exercício foi garantir que o jogo sobrevivesse ao F5 acidental.</b> Usei o armazenamento em local storage para contornar isso, e adicionalmente implementei um botão "update" para embaralhar novamente de forma intencional.
               </p>
               <a href="https://rzc.netlify.com" target="_blank" class="text-nowrap line">rzc.netlify.com</a>
             </div>
